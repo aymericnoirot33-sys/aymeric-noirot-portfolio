@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mon Portfolio Créatif</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MonPortfolio<span class="dot">.</span></div>
+        <ul>
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact" class="btn-nav">Me contacter</a></li>
+        </ul>
+    </nav>
+
+    <header id="hero">
+        <div class="hero-content">
+            <h1>Bonjour, je suis <span class="highlight">étudiant en 1ère année de BUT GEII</span></h1>
+            <p></p>
+            <a href="#projets" class="btn-main">Voir mon travail</a>
+        </div>
+        <div class="wave">
+            <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </header>
+
+    <main>
+        <section id="projets">
+            <h2>Mes derniers <span class="underline">projets</span></h2>
+            
+            <div class="grid-projets">
+               <article class="card">
+                    <div class="card-img img-SLR"></div>
+                    
+                    <div class="card-content">
+                        <h3>Projet SLR</h3>
+                        <p>Conception et réalisation de la carte gérant les lumières du rafale français.</p>
+                        <a href="#">Voir le projet &rarr;</a>
+                    </div> </article>
+
+                <article class="card">
+                    <div class="card-img img-TDB"></div> 
+                    
+                    <div class="card-content">
+                        <h3>Projet TDB</h3>
+                        <p>Conception et réalisation d'un thermomètre de bain pour bébé.</p>
+                        <a href="#">Voir le projet &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img"></div>
+                    <div class="card-content">
+                        <h3>Kart à hélice</h3>
+                        <p>Conception et réalisation d'un kart à hélice télécommandé.</p>
+                        <a href="#">Voir le projet &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact-box">
+                <h2>Envie de travailler ensemble ?</h2>
+                <p>N'hésitez pas à m'envoyer un message pour discuter de votre projet.</p>
+                <a href="mailto:aymeric.noirot@etu.u-bordeaux.fr" class="btn-main">M'envoyer un email</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mon Portfolio. Fait avec <span style="color:red">&hearts;</span> et du code.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
