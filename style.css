@@ -1,7 +1,7 @@
 /* --- RESET & VARIABLES --- */
 :root {
-    --primary: #FFD700; /* Jaune soleil */
-    --primary-dark: #e6c200; /* Jaune plus foncé pour le survol */
+    --primary: #FFD700; 
+    --primary-dark: #e6c200; 
     --dark: #1a1a1a;
     --light: #f4f4f4;
     --white: #ffffff;
@@ -31,7 +31,7 @@ ul { list-style: none; }
     align-items: center;
     padding: 20px 5%;
     background: var(--white);
-    position: sticky; /* La barre reste en haut */
+    position: sticky; 
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -53,21 +53,20 @@ ul { list-style: none; }
 
 .navbar a:hover { color: var(--primary-dark); }
 
-/* Bouton spécial dans le menu */
 .btn-nav {
     background: var(--dark);
     color: var(--primary) !important;
     padding: 10px 20px;
-    border-radius: 50px; /* Forme pilule */
+    border-radius: 50px;
     transition: transform 0.3s ease;
 }
 
 .btn-nav:hover { transform: scale(1.05); }
 
-/* --- HERO SECTION (HEADER) --- */
+/* --- Hero (HEADER) --- */
 header {
-    background-color: var(--primary); /* Fond jaune */
-    height: 90vh; /* Prend presque tout l'écran */
+    background-color: var(--primary);
+    height: 90vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,8 +84,8 @@ header {
 .highlight {
     background: var(--white);
     padding: 0 10px;
-    border-radius: 10px; /* Coins arrondis légers */
-    transform: rotate(-2deg); /* Petite rotation sympa */
+    border-radius: 10px;
+    transform: rotate(-2deg);
     display: inline-block;
 }
 
@@ -112,11 +111,10 @@ header {
     color: var(--dark);
     transform: translateY(-5px);
 }
-
-/* La vague SVG en bas */
+/* Vague décorative en bas du header */
 .wave {
     position: absolute;
-    bottom: -1px; /* Pour éviter ligne blanche */
+    bottom: -1px; 
     left: 0;
     width: 100%;
     line-height: 0;
@@ -140,14 +138,14 @@ h2 {
 
 .grid-projets {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive auto */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 40px;
 }
 
 /* Cartes Projets */
 .card {
     background: var(--white);
-    border-radius: 20px; /* Formes arrondies */
+    border-radius: 20px; 
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
@@ -160,18 +158,17 @@ h2 {
 }
 
 .card-img {
-    width: 100%;       /* Prend toute la largeur de la carte */
-    height: 250px;     /* Hauteur FIXE pour que toutes les cartes soient égales */
-    background-color: #f9f9f9; /* Couleur de fond derrière l'image */
+    width: 100%;  
+    height: 250px;     
+    background-color: #f9f9f9; 
     
-    /* LA MAGIE POUR QUE L'IMAGE FIT BIEN : */
-    background-size: contain;   /* Affiche l'image ENTIÈRE (pas de crop/zoom) */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Pas de répétition */
-    border-bottom: 1px solid #eee; /* Petite séparation visuelle */
+    background-size: contain;   
+    background-position: center; 
+    background-repeat: no-repeat; 
+    border-bottom: 1px solid #eee;
 }
 
-/* Tes images spécifiques */
+/*images*/
 .img-SLR {
     background-image: url('images/SLR.jpg');
 }
@@ -201,7 +198,7 @@ h2 {
 .contact-box {
     background: var(--light);
     padding: 60px;
-    border-radius: 30px; /* Grosse courbe */
+    border-radius: 30px;
     text-align: center;
     width: 100%;
     max-width: 800px;
@@ -209,7 +206,6 @@ h2 {
     overflow: hidden;
 }
 
-/* Petite décoration jaune derrière */
 .contact-box::before {
     content: '';
     position: absolute;
