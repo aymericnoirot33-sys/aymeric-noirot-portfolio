@@ -122,6 +122,7 @@ header {
     left: 0;
     width: 100%;
     line-height: 0;
+    pointer-events: none;
 }
 
 /* --- SECTION PROJETS --- */
@@ -173,8 +174,12 @@ h2 {
 }
 
 /*images*/
-.img-SLR {
-    background-image: url('images/SLR.jpg');
+.img-robot-holonome {
+    background-image: url('images/holonome.jpg');
+}
+
+.img-kah {
+    background-image: url('images/KAH.jpg');
 }
 
 .img-TDB {
