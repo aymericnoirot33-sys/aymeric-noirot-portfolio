@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
+
+<head>
+    <link rel="stylesheet" href="style.css"> <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+</head>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mon Portfolio Créatif</title>
+    <title>Portfolio GEII</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">MonPortfolio<span class="dot">.</span></div>
+        <div class="logo">Aymeric Noirot<span class="dot">.</span></div>
         <ul>
             <li><a href="#hero">Accueil</a></li>
+            <li><a href="#parcours">Parcours</a></li>
             <li><a href="#projets">Projets</a></li>
             <li><a href="#contact" class="btn-nav">Me contacter</a></li>
+            <li><button id="theme-toggle" class="btn-nav" style="cursor: pointer; border: none; font-family: inherit;">🌙 Sombre</button></li>
         </ul>
     </nav>
 
@@ -27,18 +38,38 @@
         </div>
         <div class="wave">
             <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                <path fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
             </svg>
         </div>
     </header>
 
+    <main>
+        <section id="parcours">
+            <h2>Mon <span class="underline">parcours</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3> Fin 2025-Aujourd'hui</h3>
+                        <p><strong>1ère année de BUT GEII</strong> à l'IUT de Bordeaux/Gradignan.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2025</h3>
+                        <p>Obtention du <strong>Bac STI2D</strong> (spécialité Système d’Information et Numérique).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     <main>
         <section id="projets">
             <h2>Mes derniers <span class="underline">projets</span> à l'IUT</h2>
             
             <div class="grid-projets">
                <article class="card">
-                    <div class="card-img img-holonome"></div>
+                    <div class="card-img img-robot-holonome"></div>
                     
                     <div class="card-content">
                         <h3>Robot Holonome</h3>
