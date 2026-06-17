@@ -1,183 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <link rel="stylesheet" href="style.css"> <script>
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-    </script>
-</head>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kart à Hélice - Projet Aymeric Noirot</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <title>Kart à Hélice - Aymeric Noirot</title>
     <link rel="stylesheet" href="../style.css">
-    <style>
-        .project-container {
-            max-width: 1100px;
-            margin: 50px auto;
-            padding: 0 5%;
-        }
-
-        .section-split {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            margin-bottom: 100px;
-        }
-
-        /* Alternance : inversion*/
-        .section-split:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .section-text { flex: 1; }
-        .section-img { flex: 1; }
-
-        .section-img img {
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        /* Effet de biais (inclinaison) */
-        .section-split:nth-child(odd) .section-img img {
-            transform: rotate(-3deg);
-        }
-        .section-split:nth-child(even) .section-img img {
-            transform: rotate(3deg);
-        }
-
-        .section-img img:hover {
-            transform: rotate(0deg) scale(1.02) !important;
-        }
-
-        /* Section Documentation / PDF */
-        .docs-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .pdf-viewer {
-            background: var(--light);
-            padding: 20px;
-            border-radius: 15px;
-        }
-
-        .pdf-viewer h3 {
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
-            border-radius: 10px;
-            background: white;
-        }
-
-        @media (max-width: 768px) {
-            .section-split, .section-split:nth-child(even) {
-                flex-direction: column;
-                text-align: center;
-            }
-            .section-img img { transform: rotate(0) !important; }
-        }
-    </style>
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="logo">MonPortfolio<span class="dot">.</span></div>
-        <ul>
-            <li><a href="../index.html">Accueil</a></li>
-            <li><a href="../index.html#projets">Retour aux projets</a></li>
-        </ul>
-    </nav>
-
-    <header style="height: 40vh; min-height: 300px;">
-        <div class="hero-content">
-            <h1>Kart à <span class="highlight">Hélice</span></h1>
-            <p>Conception d'un véhicule télécommandé à propulsion aérienne.</p>
-        </div>
+    <header>
+        <nav>
+            <div class="logo">AN.</div>
+            <ul class="nav-links">
+                <li><a href="../index.html#accueil">Accueil</a></li>
+                <li><a href="../index.html#projets">Mes Projets</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="project-container">
-        
-        <section class="section-split">
-            <div class="section-img">
-                <img src="../images/KAH.jpg" alt="Modélisation 3D du Kart">
-            </div>
-            <div class="section-text">
-                <h2>01. <span class="underline">Conception</span></h2>
-                <p></p>
-                <p></p>
-            </div>
-        </section>
-
-        <section class="section-split">
-            <div class="section-img">
-                <img src="../images/KAH.jpg" alt="Modélisation 3D du Kart">
-            </div>
-            <div class="section-text">
-                <h2>02. <span class="underline">Fabrication</span></h2>
-                <p>Après avoir conçu le routage de la carte éléctronique, nous avons procédé à sa fabrication sur une plaque de cuivre.</p>
-                <p></p>
-            </div>
-        </section>
-
-        <section class="section-split">
-            <div class="section-img">
-                <img src="../images/KAH.jpg" alt="Modélisation 3D du Kart">
-            </div>
-            <div class="section-text">
-                <h2>03. <span class="underline">Vérification</span></h2>
-                <p></p>
-                <p></p>
-            </div>
-        </section>
-
-        <section id="documentation">
-            <h2 style="text-align: center; margin-bottom: 40px;">Dossiers <span class="underline">Techniques</span></h2>
+    <main>
+        <section class="project-detail">
+            <a href="../index.html#projets" class="back-link">← Retour aux projets</a>
             
-            <div class="docs-grid">
-                <div class="pdf-viewer">
-                    <h3>Conception <a href="../docs/conception_kah.pdf" target="_blank" class="btn-nav" style="font-size: 0.8rem;">Plein écran</a></h3>
-                    <iframe src="../docs/conception_kah.pdf#toolbar=0"></iframe>
+            <h2 style="margin-bottom: 1rem;">Kart à Hélice</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 4rem; font-size: 1.2rem;">
+                Conception, fabrication et vérification d'un kart à hélice.
+            </p>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 4rem; font-size: 1.2rem;">
+                Paragraphe
+            <div class="project-showcase">
+                
+                <div class="showcase-row">
+                    <div class="showcase-image">
+                        <img src="../images/Placeholder.png" alt="Vue d'ensemble 3D du robot holonome">
+                    </div>
+                    <div class="showcase-text">
+                        <h3>Titre</h3>
+                        <p>Paragraphe</p>
+                    </div>
                 </div>
 
-                <div class="pdf-viewer">
-                    <h3>Fabrication <a href="../docs/fabrication_kah.pdf" target="_blank" class="btn-nav" style="font-size: 0.8rem;">Plein écran</a></h3>
-                    <iframe src="../docs/fabrication_kah.pdf#toolbar=0"></iframe>
+                <div class="showcase-row reverse">
+                    <div class="showcase-image">
+                        <img src="../images/Placeholder.png" alt="Détail du Lidar et de la Raspberry Pi">
+                    </div>
+                    <div class="showcase-text">
+                        <h3>Titre</h3>
+                        <p>Paragraphe</p>
+                    </div>
                 </div>
 
-                <div class="pdf-viewer">
-                    <h3>Vérification & Tests <a href="../docs/verification_kah.pdf" target="_blank" class="btn-nav" style="font-size: 0.8rem;">Plein écran</a></h3>
-                    <iframe src="../docs/verification_kah.pdf#toolbar=0"></iframe>
+                <div class="showcase-row">
+                    <div class="showcase-image">
+                        <img src="../images/Placeholder.png" alt="Gestion de la puissance et du code">
+                    </div>
+                    <div class="showcase-text">
+                        <h3>Titre</h3>
+                        <p>Paragraphe</p>                    
+                    </div>
                 </div>
+
             </div>
         </section>
-
     </main>
 
     <footer>
-        <p>&copy; 2026 Aymeric Noirot - Projet Kart à Hélice</p>
+        <p>&copy; 2026 Aymeric Noirot. Tous droits réservés.</p>
     </footer>
-
-    <script>
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-    </script>
 </body>
 </html>

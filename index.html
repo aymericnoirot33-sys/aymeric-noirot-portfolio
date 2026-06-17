@@ -1,116 +1,98 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <link rel="stylesheet" href="style.css"> <script>
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-    </script>
-</head>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio GEII</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <title>Aymeric Noirot - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="logo">Aymeric Noirot<span class="dot">.</span></div>
-        <ul>
-            <li><a href="#hero">Accueil</a></li>
-            <li><a href="#parcours">Parcours</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#contact" class="btn-nav">Me contacter</a></li>
-            <li><button id="theme-toggle" class="btn-nav" style="cursor: pointer; border: none; font-family: inherit;">🌙 Sombre</button></li>
-        </ul>
-    </nav>
-
-    <header id="hero">
-        <div class="hero-content">
-            <h1>Bonjour, je suis <span class="highlight">étudiant en 1ère année de BUT GEII</span></h1>
-            <p></p>
-            <a href="#projets" class="btn-main">Voir mon travail</a>
-        </div>
-        <div class="wave">
-            <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
-                <path fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg>
-        </div>
+    <header>
+        <nav>
+            <div class="logo">Aymeric Noirot</div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#projets">Mes Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section id="parcours">
-            <h2>Mon <span class="underline">parcours</span></h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3> Fin 2025-Aujourd'hui</h3>
-                        <p><strong>1ère année de BUT GEII</strong> à l'IUT de Bordeaux/Gradignan.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>2025</h3>
-                        <p>Obtention du <strong>Bac STI2D</strong> (spécialité Système d’Information et Numérique).</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <main>
-        <section id="projets">
-            <h2>Mes derniers <span class="underline">projets</span> à l'IUT</h2>
+        <section id="accueil" class="hero">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
             
-            <div class="grid-projets">
-               <article class="card">
-                    <div class="card-img img-robot-holonome"></div>
-                    
-                    <div class="card-content">
-                        <h3>Robot Holonome</h3>
-                        <p>Conception d'un robot autonome | DU Robotique de l'IUT de Bordeaux.</p>
-                        <a href="projets/robot-holonome.html">Voir le projet &rarr;</a>
-                    </div> </article>
-
-                <article class="card">
-                    <div class="card-img img-TDB"></div> 
-                    
-                    <div class="card-content">
-                        <h3>Projet TDB</h3>
-                        <p>Conception et réalisation d'un thermomètre de bain pour bébé.</p>
-                        <a href="projets/tdb.html">Voir le projet &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-img img-KAH"></div>
-                    <div class="card-content">
-                        <h3>Kart à hélice</h3>
-                        <p>Conception et réalisation d'un kart à hélice télécommandé.</p>
-                        <a href="projets/kah.html">Voir le projet &rarr;</a>
-                    </div>
-                </article>
+            <div class="hero-content">
+                <h1><span>Aymeric Noirot</span></h1>
+                <p>Electronique | Informatique Industrielle | Automatisation | Robotique</p>
+                <a href="#projets" class="btn">Découvrir mes projets</a>
             </div>
         </section>
 
-        <section id="contact">
-            <div class="contact-box">
-                <h2>Contact</h2>
-                <p>N'hésitez pas à m'envoyer un message pour plus d'informations</p>
-                <a href="mailto:aymeric.noirot@etu.u-bordeaux.fr" class="btn-main">M'envoyer un email</a>
+        <section id="apropos" class="about">
+            <h2>À propos de moi</h2>
+            <div class="about-content">
+                <p>Passionné par l'électronique, les systèmes embarqués et l'automatisation industrielle, je suis actuellement étudiant en première année au sein du <strong>département GEII (Génie Électrique et Informatique Industrielle) de l'IUT de Bordeaux</strong>, rattaché à l'<strong>Université de Bordeaux</strong>.</p>
+                <p>Ce parcour me permet de développer de solides compétences en programmation (C/C++, Python), en conception de circuits électroniques / circuit de puissance, et en modélisation 3D.</p>
+                <p></p>
+                
+                <div class="institutions-container">
+                    <div class="institution-card">
+                        <a href="https://www.u-bordeaux.fr/" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                            <img src="images/UB-Logo.png" alt="Université de Bordeaux">
+                        </a>
+                    </div>
+                    <div class="institution-card">
+                        <a href="https://www.iut.u-bordeaux.fr/" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                            <img src="images/GEII-Logo-IUT.jpg" alt="IUT de Bordeaux - Département GEII">
+                        </a>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section id="projets" class="projects-section">
+            <h2>Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/RobotHolonome.jpg" alt="Robot Holonome">
+                    <div class="project-info">
+                        <h3>Robot Holonome Autonome</h3>
+                        <p>Développement d'un robot de navigation basé sur Raspberry Pi 3 et capteur Lidar.</p>
+                        <a href="projets/robot-holonome.html" class="btn-outline">Voir le projet</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/KAH.jpg" alt="Kart à Hélice">
+                    <div class="project-info">
+                        <h3>Kart à Hélice</h3>
+                        <p>Conception, routage électronique complet d'un kart à propulsion.</p>
+                        <a href="projets/kah.html" class="btn-outline">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Me Contacter</h2>
+            
+            <!-- Ajout du text-align: center; ici -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <a href="mailto:aymeric.noirot33@gmail.com" class="btn">M'envoyer un email</a>
+            </div>
+            
+            <!-- Affichage de l'email en clair -->
+            <p style="font-size: 1rem; color: var(--text-light); text-align: center;">
+                Ou contactez-moi directement à : <br>
+                <strong style="color: var(--text-main); user-select: all;">aymeric.noirot33@gmail.com</strong>
+            </p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Mon Portfolio. Fait avec <span style="color:red">&hearts;</span> et du code.</p>
+        <p>&copy; 2026 Aymeric Noirot.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

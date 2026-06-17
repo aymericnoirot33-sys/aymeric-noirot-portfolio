@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Holonome - Aymeric Noirot</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AN.</div>
+            <ul class="nav-links">
+                <li><a href="../index.html#accueil">Accueil</a></li>
+                <li><a href="../index.html#projets">Mes Projets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-detail">
+            <a href="../index.html#projets" class="back-link">← Retour aux projets</a>
+            
+            <h2 style="margin-bottom: 1rem;">Robot Holonome Autonome</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 4rem; font-size: 1.2rem;">
+                Conception et développement d'un système intelligent.
+            </p>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 4rem; font-size: 1.2rem;">
+                 Projet réalisé dans le cadre du Diplôme Universitaire de Robotique, en équipe de 4 étudiants,
+                 avec pour objectif de créer un robot capable de sortir d'un labyrinthe inconu,
+                 en utilisant un capteur LIDAR pour la détection d'obtacles et des Servomoteurs pour commander les roues précisément.
+            </p>
+            
+            <div class="project-showcase">
+                
+                <div class="showcase-row">
+                    <div class="showcase-image">
+                        <img src="../images/RobotHolonome/3D.jpg" alt="Vue d'ensemble 3D du robot holonome">
+                    </div>
+                    <div class="showcase-text">
+                        <h3>Conception Mécanique</h3>
+                        <p>Ce projet repose sur la conception et l'assemblage 3D du robot. Les roues holonomes lui permetent de se déplacer dans n'importe quelle direction sur un plan en 2D, sans avoir besoin de pivoter.</p>
+                        <p>Cette particularité offre une manœuvrabilité exceptionnelle, idéale pour notre objectif et la navigation dans des espaces restreints.</p>
+                        <p>Le chasis à été réalisé en découpe laser sur des plaques de 3mm. La modélisation 3D a été réalisée sur OnShape, similaire à SolidWorks.</p>
+                    </div>
+                </div>
+
+                <div class="showcase-row reverse">
+                    <div class="showcase-image">
+                        <img src="../images/RobotHolonome.jpg" alt="Détail du Lidar et de la Raspberry Pi">
+                    </div>
+                    <div class="showcase-text">
+                        <h3>Architecture électronique</h3>
+                        <p>Le traitement principal du robot est assuré par une <strong>Raspberry Pi 3</strong>. Elle agit comme le cerveau du système, traitant les données du lidar en temps réel.</p>
+                        <p>Pour la perception de son environnement, le robot est équipé d'un <strong>scanner Lidar à 360 degrés</strong>. Ce capteur laser mesure des distances avec précision sur 360 points.</p>
+                        <p>Le déplacement du robot se fait à l'aide des roues holonomes et des <strong>servomoteurs Dynamixel MX-12W</strong> permettant le déplacement rapide et précis du robot.</p>
+                        <p>Pour l'alimentation, le robot utilise <strong>3 accumulateurs LI-ion de 3000mAh</strong> chacun couplés en parallèle.</p>
+                    </div>
+                </div>
+
+                <div class="showcase-row">
+                    <div class="showcase-image">
+                        <img src="../images/RobotHolonome.jpg" alt="Gestion de la puissance et du code">
+                    </div>
+                    <div class="showcase-text">
+                        <h3>Logique logicielle et de puissance</h3>
+                        <p>La difficulté majeure du projet a résidé dans l'intégration harmonieuse de la logique matérielle et logicielle. Il a fallu développer les algorithmes de navigation et d'évitement d'obstacles de A à Z.</p>
+                        <p>En parallèle, l'électronique de puissance a nécessité une attention particulière pour distribuer une alimentation stable aux moteurs tout en maintenant une communication fluide et sans parasites entre la Raspberry Pi et les différents capteurs embarqués.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Aymeric Noirot. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
