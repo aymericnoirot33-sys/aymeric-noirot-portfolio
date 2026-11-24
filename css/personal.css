@@ -1,0 +1,376 @@
+/* ==========================================================================
+   Page « Projets personnels » — Styles dédiés
+   Graphite-Slate (#161A22) · Accents verts (#28CA67) · Arrondis modérés
+   ========================================================================== */
+
+/* --- Hero éditorial & carte atelier structurée --- */
+.personal-hero {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 52px;
+}
+
+.personal-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
+  align-items: start;
+  gap: 40px;
+}
+
+.personal-hero-content {
+  max-width: 640px;
+}
+
+.personal-hero-content .page-hero-lead {
+  margin-bottom: 28px;
+}
+
+.personal-hero-content .page-hero-lead code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  color: var(--text-primary);
+  background-color: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+  padding: 1px 6px;
+}
+
+.personal-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 36px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+
+.personal-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.personal-stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.personal-stat-value.is-accent {
+  color: var(--accent);
+}
+
+.personal-stat-label {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+/* Carte atelier structurée (remplace le panneau d'ondes répétitives) */
+.personal-bench-card {
+  background-color: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.personal-bench-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  background-color: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.personal-bench-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.personal-bench-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background-color: var(--accent-tint);
+  border: 1px solid var(--accent-border);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--accent-bright);
+}
+
+.personal-bench-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.personal-bench-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.personal-bench-row {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 12px;
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.personal-bench-row:last-child {
+  border-bottom: none;
+}
+
+.personal-bench-index {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.personal-bench-step {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.personal-bench-tools {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+/* --- Section catalogue & filtres --- */
+.personal-catalog-section {
+  padding-top: 44px;
+  padding-bottom: 72px;
+}
+
+.personal-filter-bar {
+  margin-bottom: 28px;
+}
+
+/* --- Raffinements des cartes de projets personnels --- */
+.personal-card-meta-left {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.personal-card-date {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.personal-tag-more {
+  color: var(--text-muted);
+  border-color: var(--surface-3);
+}
+
+.personal-card-team {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.personal-cta-arrow {
+  flex-shrink: 0;
+  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover .personal-cta-arrow,
+.project-card:focus-visible .personal-cta-arrow {
+  transform: translateX(3px);
+}
+
+@keyframes personalCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.personal-card-enter {
+  animation: personalCardIn 240ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* --- État vide & fallback noscript --- */
+.personal-empty-state,
+.personal-noscript {
+  grid-column: 1 / -1;
+  background-color: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  text-align: center;
+}
+
+.personal-empty-title {
+  margin: 0 0 8px;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.personal-empty-desc {
+  margin: 0 0 20px;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+.personal-noscript {
+  margin-top: 24px;
+  text-align: left;
+}
+
+.personal-noscript h2 {
+  margin: 0 0 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.personal-noscript p {
+  margin: 0 0 12px;
+  color: var(--text-secondary);
+}
+
+.personal-noscript ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-secondary);
+  display: grid;
+  gap: 6px;
+}
+
+/* --- Bandeau de passerelle vers les projets universitaires --- */
+.personal-bridge-section {
+  padding-top: 12px;
+  padding-bottom: 88px;
+}
+
+.cross-link-banner {
+  position: relative;
+  background-color: var(--surface-1);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-xl);
+  padding: 38px 42px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) auto;
+  align-items: center;
+  gap: 32px;
+}
+
+.cross-link-content {
+  max-width: 600px;
+}
+
+.cross-link-title {
+  margin: 10px 0 12px;
+  font-size: clamp(1.375rem, 2.5vw, 1.875rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+
+.cross-link-desc {
+  margin: 0;
+  font-size: 0.96875rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.cross-link-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .personal-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .cross-link-banner {
+    grid-template-columns: 1fr;
+    padding: 32px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .personal-hero {
+    padding-top: 48px;
+    padding-bottom: 36px;
+  }
+
+  .personal-catalog-section {
+    padding-top: 32px;
+    padding-bottom: 52px;
+  }
+
+  .personal-bridge-section {
+    padding-bottom: 64px;
+  }
+
+  .cross-link-banner {
+    padding: 24px 20px;
+  }
+
+  .cross-link-actions {
+    width: 100%;
+  }
+
+  .cross-link-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .personal-bench-row {
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 4px 10px;
+  }
+
+  .personal-bench-tools {
+    grid-column: 2;
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .personal-card-enter {
+    animation: none;
+  }
+
+  .personal-cta-arrow {
+    transition: none;
+  }
+}

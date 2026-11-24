@@ -1,0 +1,948 @@
+/* ==========================================================================
+   Page d'accueil & Parcours — Aymeric Noirot (BUT GEII)
+   Esthétique : Graphite-Slate (#161A22), accents bleus (#5294FF),
+   coins modérément arrondis, visuels techniques variés.
+   ========================================================================== */
+
+/* Ancres propres sous l'en-tête sticky */
+#apropos,
+#parcours,
+#competences,
+#projets,
+#contact {
+  scroll-margin-top: calc(var(--header-h, 64px) + 24px);
+}
+
+/* --------------------------------------------------------------------------
+   1. Hero éditorial
+   -------------------------------------------------------------------------- */
+.home-hero {
+  padding: 52px 0 40px;
+}
+
+.hero-copy {
+  max-width: 780px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.hero-copy .eyebrow {
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.home-hero-title {
+  margin: 0 auto 18px;
+  max-width: 18ch;
+  font-size: clamp(2.35rem, 5.2vw, 3.85rem);
+  font-weight: 600;
+  line-height: 1.07;
+  letter-spacing: -0.036em;
+  color: var(--text-strong);
+  text-wrap: balance;
+}
+
+.home-hero-lead {
+  margin: 0 auto 26px;
+  max-width: 60ch;
+  font-size: clamp(1.025rem, 1.5vw, 1.15rem);
+  line-height: 1.62;
+  color: var(--text-secondary);
+}
+
+.home-hero-actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.home-hero-actions .btn svg {
+  flex-shrink: 0;
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-hero-actions .btn-primary:hover svg {
+  transform: translateY(2px);
+}
+
+/* Visuel signature plat */
+.hero-artwork {
+  margin: 0;
+  background-color: var(--surface-visual);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.hero-artwork-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  background-color: var(--surface-1);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.hero-artwork-id {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-secondary);
+}
+
+.hero-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.hero-artwork-specs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+}
+
+.hero-artwork-specs span {
+  white-space: nowrap;
+}
+
+.spec-sep {
+  color: var(--accent-border);
+}
+
+.hero-artwork-canvas {
+  padding: 8px 0;
+  background-color: var(--surface-visual);
+}
+
+.hero-curve-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-main-curve {
+  stroke-dasharray: 920;
+  stroke-dashoffset: 0;
+  animation: heroTraceDraw 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes heroTraceDraw {
+  from {
+    stroke-dashoffset: 920;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.hero-artwork-footer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--border-subtle);
+  background-color: var(--surface-1);
+}
+
+.hero-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 20px;
+  border-right: 1px solid var(--border-subtle);
+}
+
+.hero-metric:last-child {
+  border-right: none;
+}
+
+.hero-metric-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent);
+}
+
+.hero-metric-value {
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   1b. Section À propos & Établissements (#apropos)
+   -------------------------------------------------------------------------- */
+.about-section {
+  position: relative;
+}
+
+.about-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) auto;
+  align-items: center;
+  gap: 32px;
+  padding: 32px 36px;
+  background-color: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+}
+
+.about-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-title {
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  color: var(--text-strong);
+}
+
+.about-text {
+  font-size: 0.975rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.about-text strong {
+  color: var(--text-strong);
+  font-weight: 600;
+}
+
+.institutions-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.institution-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 196px;
+  height: 82px;
+  padding: 14px 20px;
+  background-color: #FFFFFF;
+  border: 2px solid transparent;
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.institution-badge:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.institution-badge img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* --------------------------------------------------------------------------
+   2. Section Mon parcours — Frise à liaison courbée douce + accents bleus
+   -------------------------------------------------------------------------- */
+.parcours-filter-bar {
+  margin-bottom: 36px;
+}
+
+.timeline-shell {
+  position: relative;
+  padding: 10px 0;
+}
+
+.timeline-curve-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+}
+
+.timeline-curve-main {
+  stroke: var(--border-strong);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.timeline-curve-branch {
+  stroke: var(--border);
+  stroke-width: 1.15;
+  stroke-linecap: round;
+  fill: none;
+  transition: stroke 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.timeline-curve-branch.is-highlighted {
+  stroke: var(--accent);
+}
+
+.timeline-list {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 148px 60px minmax(0, 1fr);
+  grid-template-areas: "meta rail card";
+  column-gap: 14px;
+  align-items: start;
+}
+
+.timeline-item[hidden] {
+  display: none;
+}
+
+/* Colonne date & catégorie */
+.timeline-meta-col {
+  grid-area: meta;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  text-align: right;
+}
+
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  transition: color 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.timeline-item.is-current-milestone .timeline-period,
+.timeline-item:hover .timeline-period,
+.timeline-item:focus-within .timeline-period {
+  color: var(--accent-bright);
+}
+
+.timeline-cat-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+/* Colonne centrale du rail courbé (amplitude douce) */
+.timeline-rail-col {
+  grid-area: rail;
+  position: relative;
+  width: 60px;
+  min-height: 60px;
+}
+
+/* Fallback discret avant le dessin SVG */
+.timeline-shell:not(.has-svg-curve) .timeline-rail-col::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: -28px;
+  left: 50%;
+  width: 1px;
+  background-color: var(--border);
+}
+
+.timeline-node {
+  position: absolute;
+  top: 28px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: var(--bg);
+  border: 1.5px solid var(--text-muted);
+  transform: translate(-50%, -50%);
+  transition: border-color 180ms cubic-bezier(0.22, 1, 0.36, 1),
+              background-color 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Légère oscillation gauche / droite (amplitude calme) */
+.timeline-item[data-wave="left"] .timeline-node {
+  left: 20px;
+}
+
+.timeline-item[data-wave="right"] .timeline-node {
+  left: 40px;
+}
+
+.timeline-node.is-current {
+  border-color: var(--accent);
+}
+
+.timeline-node.is-current::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+.timeline-item:hover .timeline-node,
+.timeline-item:focus-within .timeline-node {
+  border-color: var(--accent);
+  background-color: var(--accent);
+}
+
+.timeline-item:hover .timeline-node.is-current::after,
+.timeline-item:focus-within .timeline-node.is-current::after {
+  background-color: var(--bg);
+}
+
+/* Carte jalon plate */
+.timeline-card {
+  grid-area: card;
+  padding: 24px 28px;
+  background-color: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+              background-color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.timeline-item.is-current-milestone .timeline-card {
+  border-color: var(--accent-border);
+}
+
+.timeline-item:hover .timeline-card,
+.timeline-item:focus-within .timeline-card {
+  border-color: var(--accent-muted);
+  background-color: var(--surface-hover);
+}
+
+.timeline-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.status-badge.is-accent-badge {
+  background-color: var(--accent-tint);
+  border-color: var(--accent-border);
+  color: var(--accent-bright);
+}
+
+.status-badge.is-accent-badge .status-dot {
+  background-color: var(--accent);
+}
+
+.timeline-card-title {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  color: var(--text-strong);
+}
+
+.timeline-card-org {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.timeline-card-summary {
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.timeline-highlights {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.timeline-highlights li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.915rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+}
+
+.timeline-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 7px;
+  height: 1.5px;
+  background-color: var(--accent-muted);
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* --------------------------------------------------------------------------
+   3. Section Domaines & compétences
+   -------------------------------------------------------------------------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+              background-color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.skill-card:hover {
+  border-color: var(--accent-muted);
+  background-color: var(--surface-hover);
+}
+
+.skill-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.skill-icon {
+  display: inline-flex;
+  line-height: 0;
+}
+
+.skill-index {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.skill-card-title {
+  margin: 0 0 10px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  color: var(--text-strong);
+}
+
+.skill-card-desc {
+  margin: 0 0 20px;
+  font-size: 0.925rem;
+  line-height: 1.58;
+  color: var(--text-secondary);
+}
+
+.skill-tags {
+  list-style: none;
+  margin: auto 0 0;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Section Explorer mes projets (Passerelle)
+   -------------------------------------------------------------------------- */
+.bridge-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.bridge-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+              background-color 200ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.bridge-card:hover {
+  border-color: var(--accent-muted);
+  background-color: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+.bridge-visual {
+  aspect-ratio: 480 / 180;
+  background-color: var(--surface-visual);
+  border-bottom: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.bridge-visual svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bridge-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 26px 28px 24px;
+}
+
+.bridge-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.bridge-meta-note {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.bridge-card-title {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--text-strong);
+}
+
+.bridge-card-desc {
+  margin: 0 0 24px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.bridge-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: color 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.bridge-card:hover .bridge-footer {
+  color: var(--accent-bright);
+}
+
+.bridge-arrow {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent);
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+              color 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.bridge-card:hover .bridge-arrow {
+  transform: translateX(4px);
+  color: var(--accent-bright);
+}
+
+/* --------------------------------------------------------------------------
+   5. Section Contact — Bannière éditoriale plate & sobre
+   -------------------------------------------------------------------------- */
+.contact-section {
+  padding-top: clamp(3.5rem, 6vw, 4.75rem);
+}
+
+.contact-banner {
+  position: relative;
+  overflow: hidden;
+  padding: 52px 48px;
+  background-color: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+}
+
+.contact-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+.contact-content {
+  position: relative;
+  z-index: 1;
+  max-width: 660px;
+}
+
+.contact-title {
+  margin: 14px 0 14px;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.028em;
+  color: var(--text-strong);
+  text-wrap: balance;
+}
+
+.contact-lead {
+  margin: 0 0 28px;
+  font-size: 1rem;
+  line-height: 1.62;
+  color: var(--text-secondary);
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.contact-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.contact-email-display {
+  color: var(--text-secondary);
+}
+
+.contact-sep {
+  color: var(--accent-border);
+}
+
+.contact-socials {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.contact-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-social-link:hover {
+  color: var(--accent-bright);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .timeline-item {
+    grid-template-columns: 124px 52px minmax(0, 1fr);
+  }
+
+  .timeline-rail-col {
+    width: 52px;
+  }
+
+  .timeline-item[data-wave="left"] .timeline-node {
+    left: 18px;
+  }
+
+  .timeline-item[data-wave="right"] .timeline-node {
+    left: 34px;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .institutions-group {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 860px) {
+  .home-hero {
+    padding: 48px 0 32px;
+  }
+
+  .hero-copy {
+    margin-bottom: 32px;
+  }
+
+  .hero-artwork-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-metric {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 14px 18px;
+  }
+
+  .hero-metric:last-child {
+    border-bottom: none;
+  }
+
+  /* Frise mobile : rail courbé discret à gauche, date au-dessus de chaque carte */
+  .timeline-item {
+    grid-template-columns: 36px minmax(0, 1fr);
+    grid-template-areas:
+      "rail meta"
+      "rail card";
+    column-gap: 12px;
+    row-gap: 8px;
+  }
+
+  .timeline-meta-col {
+    padding-top: 2px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .timeline-rail-col {
+    width: 36px;
+    min-height: 100%;
+  }
+
+  .timeline-node {
+    top: 12px;
+  }
+
+  .timeline-item[data-wave="left"] .timeline-node {
+    left: 12px;
+  }
+
+  .timeline-item[data-wave="right"] .timeline-node {
+    left: 24px;
+  }
+
+  .timeline-card {
+    padding: 20px;
+  }
+
+  .bridge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-banner {
+    padding: 40px 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-artwork-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 12px 16px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-card-top {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bridge-body {
+    padding: 20px;
+  }
+
+  .contact-banner {
+    padding: 32px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero-actions {
+    width: 100%;
+  }
+
+  .home-hero-actions .btn,
+  .contact-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Respect des préférences de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+  .hero-main-curve {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+
+  .bridge-card:hover,
+  .institution-badge:hover {
+    transform: none;
+  }
+
+  .home-hero-actions .btn-primary:hover svg,
+  .bridge-card:hover .bridge-arrow {
+    transform: none;
+  }
+}

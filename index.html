@@ -1,98 +1,820 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aymeric Noirot - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aymeric Noirot — Portfolio BUT GEII | Accueil &amp; Parcours</title>
+  <meta name="description" content="Portfolio d'Aymeric Noirot, étudiant en 1re année de BUT GEII à l'IUT de Bordeaux (Université de Bordeaux) : électronique, informatique industrielle, automatisation, robotique et réalisations techniques.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='none'%3E%3Crect width='28' height='28' rx='7' fill='%23161A22'/%3E%3Crect x='1' y='1' width='26' height='26' rx='7' stroke='%23525F78' stroke-width='1.2'/%3E%3Cpath d='M5.5 19.5C9.5 19.5 10 8.5 14 8.5C18 8.5 18.5 19.5 22.5 19.5' stroke='%23F8FAFC' stroke-width='1.6' stroke-linecap='round'/%3E%3Ccircle cx='14' cy='8.5' r='2.1' fill='%235294FF'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/home.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/home.js" defer></script>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">Aymeric Noirot</div>
-            <ul class="nav-links">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#apropos">À propos</a></li>
-                <li><a href="#projets">Mes Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body data-page="home">
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
-    <main>
-        <section id="accueil" class="hero">
-            <div class="blob blob-1"></div>
-            <div class="blob blob-2"></div>
-            
-            <div class="hero-content">
-                <h1><span>Aymeric Noirot</span></h1>
-                <p>Electronique | Informatique Industrielle | Automatisation | Robotique</p>
-                <a href="#projets" class="btn">Découvrir mes projets</a>
-            </div>
-        </section>
+  <!-- En-tête partagé -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Aymeric Noirot — Retour à l'accueil">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="26" height="26" rx="7" stroke="var(--border-strong)" stroke-width="1.2"/>
+            <path d="M5.5 19.5C9.5 19.5 10 8.5 14 8.5C18 8.5 18.5 19.5 22.5 19.5" stroke="var(--text-strong)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M5.5 14.5C9.2 14.5 11.2 11.5 14 11.5C16.8 11.5 18.8 14.5 22.5 14.5" stroke="var(--text-muted)" stroke-width="1" stroke-linecap="round"/>
+            <circle cx="14" cy="8.5" r="2.1" fill="var(--accent)"/>
+          </svg>
+        </span>
+        <span>Aymeric Noirot</span>
+      </a>
 
-        <section id="apropos" class="about">
-            <h2>À propos de moi</h2>
-            <div class="about-content">
-                <p>Passionné par l'électronique, les systèmes embarqués et l'automatisation industrielle, je suis actuellement étudiant en première année au sein du <strong>département GEII (Génie Électrique et Informatique Industrielle) de l'IUT de Bordeaux</strong>, rattaché à l'<strong>Université de Bordeaux</strong>.</p>
-                <p>Ce parcour me permet de développer de solides compétences en programmation (C/C++, Python), en conception de circuits électroniques / circuit de puissance, et en modélisation 3D.</p>
-                <p></p>
-                
-                <div class="institutions-container">
-                    <div class="institution-card">
-                        <a href="https://www.u-bordeaux.fr/" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
-                            <img src="images/UB-Logo.png" alt="Université de Bordeaux">
-                        </a>
-                    </div>
-                    <div class="institution-card">
-                        <a href="https://www.iut.u-bordeaux.fr/" target="_blank" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
-                            <img src="images/GEII-Logo-IUT.jpg" alt="IUT de Bordeaux - Département GEII">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="index.html" class="nav-link is-active" data-nav="home" aria-current="page">Accueil</a>
+        <a href="projets-personnels.html" class="nav-link" data-nav="personal">Projets personnels</a>
+        <a href="projets-universite.html" class="nav-link" data-nav="university">Projets universitaires</a>
+      </nav>
 
-        <section id="projets" class="projects-section">
-            <h2>Mes Projets</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="images/RobotHolonome.jpg" alt="Robot Holonome">
-                    <div class="project-info">
-                        <h3>Robot Holonome Autonome</h3>
-                        <p>Développement d'un robot de navigation basé sur Raspberry Pi 3 et capteur Lidar.</p>
-                        <a href="projets/robot-holonome.html" class="btn-outline">Voir le projet</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="images/KAH.jpg" alt="Kart à Hélice">
-                    <div class="project-info">
-                        <h3>Kart à Hélice</h3>
-                        <p>Conception, routage électronique complet d'un kart à propulsion.</p>
-                        <a href="projets/kah.html" class="btn-outline">Voir le projet</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">Me contacter</a>
+        <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <path d="M2.5 5H15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M2.5 9H15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M2.5 13H15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
 
-        <section id="contact" class="contact">
-            <h2>Me Contacter</h2>
-            
-            <!-- Ajout du text-align: center; ici -->
-            <div style="text-align: center; margin: 2rem 0;">
-                <a href="mailto:aymeric.noirot33@gmail.com" class="btn">M'envoyer un email</a>
+    <div id="mobile-nav" class="mobile-nav" hidden>
+      <div class="container mobile-nav-inner">
+        <a href="index.html" class="nav-link is-active" data-nav="home" aria-current="page">Accueil</a>
+        <a href="projets-personnels.html" class="nav-link" data-nav="personal">Projets personnels</a>
+        <a href="projets-universite.html" class="nav-link" data-nav="university">Projets universitaires</a>
+        <a href="#contact" class="btn btn-primary btn-sm">Me contacter</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- 1. HERO ÉDITORIAL -->
+    <section class="home-hero">
+      <div class="container">
+        <div class="hero-copy">
+          <p class="eyebrow">Électronique &middot; Informatique Industrielle &middot; Automatisation &middot; Robotique</p>
+          <h1 class="home-hero-title">Concevoir des systèmes concrets, du circuit électronique au robot autonome.</h1>
+          <p class="home-hero-lead">
+            Je suis Aymeric Noirot, étudiant en 1re année de BUT GEII à l'IUT de Bordeaux (Université de Bordeaux).
+            Je conçois des cartes électroniques, développe en C/C++ et Python et assemble des systèmes robotiques et automatisés du prototype à la validation sur banc.
+          </p>
+          <div class="home-hero-actions">
+            <a href="projets-universite.html" class="btn btn-primary">
+              <span>Découvrir mes projets</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3.5 8H12.5M9 4.5L12.5 8L9 11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#parcours" class="btn btn-secondary">Mon parcours</a>
+          </div>
+        </div>
+
+        <!-- Visuel signature épuré : une courbe principale + repères bleus sur grille technique -->
+        <figure class="hero-artwork" aria-label="Schéma minimaliste illustrant la chaîne acquisition, traitement embarqué et commande">
+          <div class="hero-artwork-bar">
+            <div class="hero-artwork-id">
+              <span class="hero-dot" aria-hidden="true"></span>
+              <span>BUT GEII &middot; IUT DE BORDEAUX</span>
             </div>
-            
-            <!-- Affichage de l'email en clair -->
-            <p style="font-size: 1rem; color: var(--text-light); text-align: center;">
-                Ou contactez-moi directement à : <br>
-                <strong style="color: var(--text-main); user-select: all;">aymeric.noirot33@gmail.com</strong>
+            <div class="hero-artwork-specs" aria-hidden="true">
+              <span>UNIVERSITÉ DE BORDEAUX</span>
+              <span class="spec-sep">/</span>
+              <span>C/C++ &middot; PYTHON &middot; PCB &middot; CAO 3D &middot; ROBOTIQUE</span>
+            </div>
+          </div>
+
+          <div class="hero-artwork-canvas">
+            <svg class="hero-curve-svg" viewBox="0 0 1040 276" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+              <!-- Grille technique sobre -->
+              <line x1="240" y1="20" x2="240" y2="256" stroke="var(--border-subtle)" stroke-width="1"/>
+              <line x1="520" y1="20" x2="520" y2="256" stroke="var(--border-subtle)" stroke-width="1"/>
+              <line x1="800" y1="20" x2="800" y2="256" stroke="var(--border-subtle)" stroke-width="1"/>
+              <line x1="24" y1="142" x2="1016" y2="142" stroke="var(--border-subtle)" stroke-width="1" stroke-dasharray="3 6"/>
+
+              <!-- Repères d'angle orthogonaux -->
+              <path d="M20 34V20H34" stroke="var(--border)" stroke-width="1.1"/>
+              <path d="M1020 34V20H1006" stroke="var(--border)" stroke-width="1.1"/>
+              <path d="M20 242V256H34" stroke="var(--border)" stroke-width="1.1"/>
+              <path d="M1020 242V256H1006" stroke="var(--border)" stroke-width="1.1"/>
+
+              <!-- Une seule courbe signature principale -->
+              <path d="M24 162C110 162 152 84 240 84C350 84 405 198 520 198C635 198 690 88 800 88C885 88 940 142 1016 142" stroke="var(--border-strong)" stroke-width="1.5" stroke-linecap="round"/>
+
+              <!-- Segment actif bleu entre les trois étapes clés -->
+              <path class="hero-main-curve" d="M240 84C350 84 405 198 520 198C635 198 690 88 800 88" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+
+              <!-- Points d'inflexion discrets -->
+              <circle cx="380" cy="141" r="2.6" fill="var(--surface-visual)" stroke="var(--accent-border)" stroke-width="1.2"/>
+              <circle cx="660" cy="143" r="2.6" fill="var(--surface-visual)" stroke="var(--accent-border)" stroke-width="1.2"/>
+
+              <!-- Nœud 01 : Acquisition -->
+              <circle cx="240" cy="84" r="10" stroke="var(--accent-border)" stroke-width="1.1"/>
+              <circle cx="240" cy="84" r="4.2" fill="var(--accent)"/>
+              <line x1="240" y1="74" x2="240" y2="50" stroke="var(--border-strong)" stroke-width="1"/>
+              <rect x="164" y="24" width="152" height="26" rx="6" fill="var(--surface-1)" stroke="var(--border)" stroke-width="1"/>
+              <text x="240" y="41" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="0.06em">
+                <tspan fill="var(--accent)">01</tspan><tspan fill="var(--text-muted)"> &middot; ACQUISITION</tspan>
+              </text>
+
+              <!-- Nœud 02 : Traitement (point focal bleu) -->
+              <circle cx="520" cy="198" r="11" stroke="var(--accent)" stroke-width="1.2"/>
+              <circle cx="520" cy="198" r="4.5" fill="var(--accent-bright)"/>
+              <line x1="520" y1="209" x2="520" y2="228" stroke="var(--accent-border)" stroke-width="1"/>
+              <rect x="444" y="228" width="152" height="26" rx="6" fill="var(--accent-tint)" stroke="var(--accent-border)" stroke-width="1"/>
+              <text x="520" y="245" text-anchor="middle" fill="var(--accent-bright)" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="0.06em">02 &middot; TRAITEMENT</text>
+
+              <!-- Nœud 03 : Commande -->
+              <circle cx="800" cy="88" r="10" stroke="var(--accent-border)" stroke-width="1.1"/>
+              <circle cx="800" cy="88" r="4.2" fill="var(--accent)"/>
+              <line x1="800" y1="78" x2="800" y2="54" stroke="var(--border-strong)" stroke-width="1"/>
+              <rect x="730" y="28" width="140" height="26" rx="6" fill="var(--surface-1)" stroke="var(--border)" stroke-width="1"/>
+              <text x="800" y="45" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="0.06em">
+                <tspan fill="var(--accent)">03</tspan><tspan fill="var(--text-muted)"> &middot; COMMANDE</tspan>
+              </text>
+            </svg>
+          </div>
+
+          <figcaption class="hero-artwork-footer">
+            <div class="hero-metric">
+              <span class="hero-metric-label">BUT GEII (1re année)</span>
+              <span class="hero-metric-value">IUT &amp; Université de Bordeaux</span>
+            </div>
+            <div class="hero-metric">
+              <span class="hero-metric-label">Spécialités</span>
+              <span class="hero-metric-value">Électronique, Embarqué &amp; Robotique</span>
+            </div>
+            <div class="hero-metric">
+              <span class="hero-metric-label">Approche</span>
+              <span class="hero-metric-value">Conception PCB, CAO 3D &amp; Code</span>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="container">
+      <hr class="section-divider">
+    </div>
+
+    <!-- PRÉSENTATION : À PROPOS DE MOI -->
+    <section id="apropos" class="section-sm about-section" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-card">
+          <div class="about-copy">
+            <span class="eyebrow">Présentation &middot; IUT de Bordeaux</span>
+            <h2 id="about-title" class="about-title">À propos de moi</h2>
+            <p class="about-text">
+              Passionné par l'électronique, les systèmes embarqués et l'automatisation industrielle, je suis actuellement étudiant en première année au sein du <strong>département GEII (Génie Électrique et Informatique Industrielle) de l'IUT de Bordeaux</strong>, rattaché à l'<strong>Université de Bordeaux</strong>.
             </p>
-        </section>
-    </main>
+            <p class="about-text">
+              Ce parcours me permet de développer de solides compétences en programmation (<strong>C/C++, Python</strong>), en conception de circuits électroniques et de puissance, ainsi qu'en modélisation 3D et robotique autonome.
+            </p>
+          </div>
+          <div class="institutions-group" aria-label="Établissements de formation">
+            <a href="https://www.u-bordeaux.fr/" target="_blank" rel="noopener noreferrer" class="institution-badge" aria-label="Université de Bordeaux">
+              <img src="images/UB-Logo.png" alt="Université de Bordeaux" loading="lazy">
+            </a>
+            <a href="https://www.iut.u-bordeaux.fr/" target="_blank" rel="noopener noreferrer" class="institution-badge" aria-label="IUT de Bordeaux — Département GEII">
+              <img src="images/GEII-Logo-IUT.jpg" alt="IUT de Bordeaux — Département GEII" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Aymeric Noirot.</p>
-    </footer>
+    <div class="container">
+      <hr class="section-divider">
+    </div>
+
+    <!-- 2. SECTION MON PARCOURS (Pièce maîtresse) -->
+    <section id="parcours" class="section parcours-section" aria-labelledby="parcours-title">
+      <div class="container">
+        <div class="section-header parcours-header">
+          <span class="eyebrow">01 &middot; Trajectoire</span>
+          <h2 id="parcours-title">Mon parcours</h2>
+          <p>
+            Formation universitaire à l'IUT de Bordeaux, spécialisation en robotique autonome et projets techniques structurants en génie électrique et informatique industrielle.
+          </p>
+        </div>
+
+        <!-- Filtres plats interactifs (js/home.js) -->
+        <div class="filter-bar parcours-filter-bar">
+          <div class="filter-group" role="group" aria-label="Filtrer les étapes du parcours">
+            <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">Tout</button>
+            <button type="button" class="filter-btn" data-filter="formation" aria-pressed="false">Formation</button>
+            <button type="button" class="filter-btn" data-filter="experience" aria-pressed="false">Expériences</button>
+            <button type="button" class="filter-btn" data-filter="repere" aria-pressed="false">Repères clés</button>
+          </div>
+          <p class="results-meta" id="parcours-count" aria-live="polite">5 étapes affichées</p>
+        </div>
+
+        <!-- Frise chronologique à liaison courbée calme -->
+        <div class="timeline-shell" id="timeline-shell">
+          <svg class="timeline-curve-svg" id="timeline-curve-svg" aria-hidden="true" fill="none"></svg>
+
+          <ol class="timeline-list" id="timeline-list">
+            <!-- Jalon 1 : BUT GEII -->
+            <li class="timeline-item is-current-milestone" data-categories="formation repere" data-wave="left">
+              <div class="timeline-meta-col">
+                <span class="timeline-period">Fin 2025 — Aujourd'hui</span>
+                <span class="timeline-cat-label">Formation</span>
+              </div>
+              <div class="timeline-rail-col" aria-hidden="true">
+                <span class="timeline-node is-current"></span>
+              </div>
+              <article class="timeline-card">
+                <div class="timeline-card-top">
+                  <div>
+                    <h3 class="timeline-card-title">BUT GEII — Génie Électrique et Informatique Industrielle (1re année)</h3>
+                    <p class="timeline-card-org">IUT de Bordeaux &middot; Campus de Gradignan &middot; Université de Bordeaux</p>
+                  </div>
+                  <span class="status-badge is-accent-badge">
+                    <span class="status-dot is-wip" aria-hidden="true"></span>
+                    <span>En cours</span>
+                  </span>
+                </div>
+                <p class="timeline-card-summary">
+                  Formation universitaire et technologique mêlant électronique analogique et de puissance, informatique industrielle, systèmes embarqués et automatisation par la pratique en laboratoire et en SAÉ.
+                </p>
+                <ul class="timeline-highlights">
+                  <li>Programmation structurée et embarquée en C/C++ et Python pour l'acquisition de capteurs, le traitement et le pilotage d'actionneurs.</li>
+                  <li>Conception de circuits électroniques et de puissance : saisie de schémas, routage et gravure de PCB, brasage et validation sur banc de mesure.</li>
+                  <li>Mise en œuvre de l'automatisation industrielle, de l'instrumentation (oscilloscope, multimètre, GBF) et de la CAO 3D pour l'intégration matérielle.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag tag-mono">C / C++</span>
+                  <span class="tag tag-mono">Python</span>
+                  <span class="tag tag-mono">Conception PCB</span>
+                  <span class="tag tag-mono">Puissance</span>
+                  <span class="tag tag-mono">Automatisation</span>
+                </div>
+              </article>
+            </li>
+
+            <!-- Jalon 2 : DU Robotique -->
+            <li class="timeline-item" data-categories="formation repere" data-wave="right">
+              <div class="timeline-meta-col">
+                <span class="timeline-period">2026</span>
+                <span class="timeline-cat-label">Formation</span>
+              </div>
+              <div class="timeline-rail-col" aria-hidden="true">
+                <span class="timeline-node"></span>
+              </div>
+              <article class="timeline-card">
+                <div class="timeline-card-top">
+                  <div>
+                    <h3 class="timeline-card-title">Diplôme Universitaire (DU) de Robotique — Robot Holonome Autonome</h3>
+                    <p class="timeline-card-org">IUT de Bordeaux &middot; Équipe pluridisciplinaire GEII &amp; GMP</p>
+                  </div>
+                  <span class="status-badge">
+                    <span class="status-dot is-academic" aria-hidden="true"></span>
+                    <span>22h + Hackathon</span>
+                  </span>
+                </div>
+                <p class="timeline-card-summary">
+                  Formation complémentaire intensive dédiée à la conception mécanique, électronique et logicielle d'un robot mobile omnidirectionnel capable de naviguer en totale autonomie.
+                </p>
+                <ul class="timeline-highlights">
+                  <li>Modélisation CAO 3D sous OnShape et fabrication par découpe laser d'un châssis holonome à trois roues omnidirectionnelles.</li>
+                  <li>Intégration matérielle autour d'une Raspberry Pi 3, d'un télémètre LiDAR 360° et de servomoteurs intelligents Dynamixel MX-12W.</li>
+                  <li>Développement en Python de la navigation autonome en labyrinthe en équipe avec Nicolas et Rémi (GEII) ainsi que Thao (GMP).</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag tag-mono">Python</span>
+                  <span class="tag tag-mono">Raspberry Pi 3</span>
+                  <span class="tag tag-mono">LiDAR 360°</span>
+                  <span class="tag tag-mono">Dynamixel MX-12W</span>
+                  <span class="tag tag-mono">OnShape</span>
+                </div>
+              </article>
+            </li>
+
+            <!-- Jalon 3 : Projets SAÉ de 1re année -->
+            <li class="timeline-item" data-categories="experience repere" data-wave="left">
+              <div class="timeline-meta-col">
+                <span class="timeline-period">2025 — 2026</span>
+                <span class="timeline-cat-label">Projets SAÉ</span>
+              </div>
+              <div class="timeline-rail-col" aria-hidden="true">
+                <span class="timeline-node"></span>
+              </div>
+              <article class="timeline-card">
+                <div class="timeline-card-top">
+                  <div>
+                    <h3 class="timeline-card-title">Projets SAÉ de 1re année — Kart à Hélice, TDB &amp; Carte Rafale (SLR)</h3>
+                    <p class="timeline-card-org">Département GEII &middot; IUT de Bordeaux</p>
+                  </div>
+                  <span class="status-badge">
+                    <span class="status-dot is-academic" aria-hidden="true"></span>
+                    <span>SAÉ GEII</span>
+                  </span>
+                </div>
+                <p class="timeline-card-summary">
+                  Réalisation complète de trois systèmes électroniques et mécatroniques selon la démarche d'ingénierie Conception &rarr; Fabrication &rarr; Vérification du cursus BUT GEII.
+                </p>
+                <ul class="timeline-highlights">
+                  <li>Kart à Hélice télécommandé (KAH) : architecture de propulsion par hélice, commande moteur, liaison radio et intégration sur châssis mobile.</li>
+                  <li>Thermomètre de Bain Bébé (TDB) : conception électronique, routage et gravure de PCB, étalonnage thermique et signalisation lumineuse par seuils.</li>
+                  <li>Système Lumineux du Rafale (SLR) : génération analogique de feux aéronautiques autour du circuit NE555, brasage et caractérisation à l'oscilloscope.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag tag-mono">SAÉ GEII</span>
+                  <span class="tag tag-mono">Kart à Hélice</span>
+                  <span class="tag tag-mono">PCB / TDB</span>
+                  <span class="tag tag-mono">NE555 / SLR</span>
+                  <span class="tag tag-mono">Vérification</span>
+                </div>
+              </article>
+            </li>
+
+            <!-- Jalon 4 : Atelier personnel -->
+            <li class="timeline-item" data-categories="experience" data-wave="right">
+              <div class="timeline-meta-col">
+                <span class="timeline-period">2025 — 2026</span>
+                <span class="timeline-cat-label">Expérience</span>
+              </div>
+              <div class="timeline-rail-col" aria-hidden="true">
+                <span class="timeline-node"></span>
+              </div>
+              <article class="timeline-card">
+                <div class="timeline-card-top">
+                  <div>
+                    <h3 class="timeline-card-title">Atelier personnel — Prototypage, CAO 3D &amp; développement</h3>
+                    <p class="timeline-card-org">Démarche autonome &middot; Expérimentation matérielle &amp; logicielle</p>
+                  </div>
+                  <span class="tag tag-mono">Autonomie</span>
+                </div>
+                <p class="timeline-card-summary">
+                  Pratique régulière en autonomie pour approfondir l'électronique, la modélisation mécanique 3D et le développement logiciel au-delà des travaux dirigés.
+                </p>
+                <ul class="timeline-highlights">
+                  <li>Expérimentations matérielles et logicielles autour des microcontrôleurs, capteurs, étages d'alimentation et petits systèmes automatisés.</li>
+                  <li>Modélisation CAO 3D de supports, boîtiers et pièces mécaniques sur mesure adaptés au prototypage rapide.</li>
+                  <li>Conception, développement et maintenance de mon portfolio technique sur GitHub pour documenter mes projets d'ingénierie.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag tag-mono">Prototypage</span>
+                  <span class="tag tag-mono">CAO 3D</span>
+                  <span class="tag tag-mono">C / Python</span>
+                  <span class="tag tag-mono">GitHub</span>
+                </div>
+              </article>
+            </li>
+
+            <!-- Jalon 5 : Baccalauréat STI2D -->
+            <li class="timeline-item" data-categories="formation repere" data-wave="left">
+              <div class="timeline-meta-col">
+                <span class="timeline-period">2025</span>
+                <span class="timeline-cat-label">Formation</span>
+              </div>
+              <div class="timeline-rail-col" aria-hidden="true">
+                <span class="timeline-node"></span>
+              </div>
+              <article class="timeline-card">
+                <div class="timeline-card-top">
+                  <div>
+                    <h3 class="timeline-card-title">Baccalauréat STI2D — Systèmes d'Information et Numérique (SIN)</h3>
+                    <p class="timeline-card-org">Enseignement technologique &middot; Spécialité SIN</p>
+                  </div>
+                  <span class="status-badge">
+                    <span class="status-dot is-done" aria-hidden="true"></span>
+                    <span>Obtenu</span>
+                  </span>
+                </div>
+                <p class="timeline-card-summary">
+                  Socle technologique centré sur les systèmes numériques, le traitement de l'information, les chaînes d'énergie et la réalisation de projets techniques ayant confirmé mon choix du BUT GEII.
+                </p>
+                <ul class="timeline-highlights">
+                  <li>Étude des chaînes d'information et d'énergie, logique numérique, architectures réseau et bases des systèmes embarqués.</li>
+                  <li>Initiation à la programmation, à l'acquisition de capteurs et au pilotage d'actionneurs sur cartes microcontrôleurs.</li>
+                  <li>Projets d'ingénierie en équipe intégrant analyse fonctionnelle, maquettage matériel, essais et soutenance technique.</li>
+                </ul>
+                <div class="timeline-tags">
+                  <span class="tag tag-mono">STI2D — SIN</span>
+                  <span class="tag tag-mono">Systèmes numériques</span>
+                  <span class="tag tag-mono">Programmation</span>
+                  <span class="tag tag-mono">Chaîne d'énergie</span>
+                </div>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <hr class="section-divider">
+    </div>
+
+    <!-- 3. SECTION DOMAINES & COMPÉTENCES -->
+    <section id="competences" class="section skills-section" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">02 &middot; Savoir-faire</span>
+          <h2 id="skills-title">Domaines &amp; compétences</h2>
+          <p>
+            Trois axes techniques complémentaires développés à l'IUT de Bordeaux pour passer d'un cahier des charges à un prototype vérifié sur banc.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Pilier 1 : Électronique & Circuits de Puissance -->
+          <article class="skill-card">
+            <div class="skill-card-head">
+              <div class="skill-icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <rect x="1" y="1" width="38" height="38" rx="9" fill="var(--surface-visual)" stroke="var(--border)" stroke-width="1"/>
+                  <!-- Broches du circuit intégré -->
+                  <line x1="16" y1="8.5" x2="16" y2="12.5" stroke="var(--text-muted)" stroke-width="1.3" stroke-linecap="round"/>
+                  <line x1="20" y1="8.5" x2="20" y2="12.5" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/>
+                  <line x1="24" y1="8.5" x2="24" y2="12.5" stroke="var(--text-muted)" stroke-width="1.3" stroke-linecap="round"/>
+                  <line x1="16" y1="27.5" x2="16" y2="31.5" stroke="var(--text-muted)" stroke-width="1.3" stroke-linecap="round"/>
+                  <line x1="20" y1="27.5" x2="20" y2="31.5" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round"/>
+                  <line x1="24" y1="27.5" x2="24" y2="31.5" stroke="var(--text-muted)" stroke-width="1.3" stroke-linecap="round"/>
+                  <line x1="8.5" y1="16" x2="12.5" y2="16" stroke="var(--text-muted)" stroke-width="1.3" stroke-linecap="round"/>
+                  <line x1="8.5" y1="20" x2="12.5" y2="20" stroke="var(--text-muted)" stroke-width="1.3" stroke-linecap="round"/>
+                  <line x1="8.5" y1="24" x2="12.5" y2="24" stroke="var(--text-muted)" stroke-width="1.3" stroke-linecap="round"/>
+                  <line x1="27.5" y1="16" x2="31.5" y2="16" stroke="var(--text-muted)" stroke-width="1.3" stroke-linecap="round"/>
+                  <line x1="27.5" y1="20" x2="31.5" y2="20" stroke="var(--text-muted)" stroke-width="1.3" stroke-linecap="round"/>
+                  <line x1="27.5" y1="24" x2="31.5" y2="24" stroke="var(--text-muted)" stroke-width="1.3" stroke-linecap="round"/>
+                  <!-- Boîtier IC et cœur bleu -->
+                  <rect x="13" y="13" width="14" height="14" rx="2.5" fill="var(--surface-2)" stroke="var(--text-strong)" stroke-width="1.3"/>
+                  <rect x="17" y="17" width="6" height="6" rx="1" fill="var(--accent)"/>
+                </svg>
+              </div>
+              <span class="skill-index">01</span>
+            </div>
+            <h3 class="skill-card-title">Électronique &amp; Circuits de Puissance</h3>
+            <p class="skill-card-desc">
+              Conception de schémas électroniques, routage et gravure de PCB, montages analogiques (NE555, conditionnement de capteurs) et étages de puissance caractérisés à l'oscilloscope.
+            </p>
+            <ul class="skill-tags" aria-label="Compétences en électronique et circuits de puissance">
+              <li class="tag tag-mono">Conception PCB</li>
+              <li class="tag tag-mono">Électronique analogique</li>
+              <li class="tag tag-mono">Circuits de puissance</li>
+              <li class="tag tag-mono">NE555</li>
+              <li class="tag tag-mono">Brasage</li>
+              <li class="tag tag-mono">Oscilloscope &amp; GBF</li>
+            </ul>
+          </article>
+
+          <!-- Pilier 2 : Robotique, Embarqué & Informatique -->
+          <article class="skill-card">
+            <div class="skill-card-head">
+              <div class="skill-icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <rect x="1" y="1" width="38" height="38" rx="9" fill="var(--surface-visual)" stroke="var(--border)" stroke-width="1"/>
+                  <!-- Fenêtre terminal / supervision embarquée -->
+                  <rect x="8.5" y="10" width="23" height="19.5" rx="3" fill="var(--surface-2)" stroke="var(--text-strong)" stroke-width="1.25"/>
+                  <line x1="9" y1="15" x2="31" y2="15" stroke="var(--border)" stroke-width="1"/>
+                  <circle cx="12" cy="12.5" r="1" fill="var(--accent)"/>
+                  <circle cx="15" cy="12.5" r="1" fill="var(--border-strong)"/>
+                  <!-- Chevron de commande bleu + curseur -->
+                  <path d="M12.5 19L16 22L12.5 25" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="18.5" y1="25" x2="25.5" y2="25" stroke="var(--text-strong)" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="skill-index">02</span>
+            </div>
+            <h3 class="skill-card-title">Robotique, Embarqué &amp; Informatique</h3>
+            <p class="skill-card-desc">
+              Programmation structurée en C/C++ et Python, intégration sur Raspberry Pi et microcontrôleurs, pilotage de servomoteurs Dynamixel et navigation autonome par LiDAR 360°.
+            </p>
+            <ul class="skill-tags" aria-label="Compétences en robotique, embarqué et informatique">
+              <li class="tag tag-mono">C / C++</li>
+              <li class="tag tag-mono">Python</li>
+              <li class="tag tag-mono">Raspberry Pi 3</li>
+              <li class="tag tag-mono">LiDAR 360°</li>
+              <li class="tag tag-mono">Dynamixel MX-12W</li>
+              <li class="tag tag-mono">Git &amp; Linux</li>
+            </ul>
+          </article>
+
+          <!-- Pilier 3 : Automatisation & Modélisation 3D -->
+          <article class="skill-card">
+            <div class="skill-card-head">
+              <div class="skill-icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <rect x="1" y="1" width="38" height="38" rx="9" fill="var(--surface-visual)" stroke="var(--border)" stroke-width="1"/>
+                  <!-- Rail DIN horizontal -->
+                  <line x1="8" y1="20" x2="32" y2="20" stroke="var(--border-strong)" stroke-width="1.2"/>
+                  <!-- 3 modules d'automatisation côte à côte -->
+                  <rect x="9" y="11" width="6.5" height="18" rx="1.8" fill="var(--surface-2)" stroke="var(--text-muted)" stroke-width="1.2"/>
+                  <rect x="16.75" y="11" width="6.5" height="18" rx="1.8" fill="var(--accent-tint)" stroke="var(--accent)" stroke-width="1.3"/>
+                  <rect x="24.5" y="11" width="6.5" height="18" rx="1.8" fill="var(--surface-2)" stroke="var(--text-strong)" stroke-width="1.2"/>
+                  <!-- Voyants LED d'état -->
+                  <circle cx="12.25" cy="14.5" r="1.2" fill="var(--text-muted)"/>
+                  <circle cx="20" cy="14.5" r="1.4" fill="var(--accent)"/>
+                  <circle cx="27.75" cy="14.5" r="1.2" fill="var(--text-strong)"/>
+                  <!-- Borniers inférieurs -->
+                  <line x1="11" y1="25" x2="13.5" y2="25" stroke="var(--border-strong)" stroke-width="1.2" stroke-linecap="round"/>
+                  <line x1="18.75" y1="25" x2="21.25" y2="25" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round"/>
+                  <line x1="26.5" y1="25" x2="29" y2="25" stroke="var(--text-muted)" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="skill-index">03</span>
+            </div>
+            <h3 class="skill-card-title">Automatisation &amp; Modélisation 3D</h3>
+            <p class="skill-card-desc">
+              Logique de commande séquentielle, pilotage d'actionneurs et conception CAO 3D sous OnShape pour la fabrication par découpe laser et l'assemblage mécatronique.
+            </p>
+            <ul class="skill-tags" aria-label="Compétences en automatisation et modélisation 3D">
+              <li class="tag tag-mono">Automatisation</li>
+              <li class="tag tag-mono">Grafcet</li>
+              <li class="tag tag-mono">CAO 3D &middot; OnShape</li>
+              <li class="tag tag-mono">Découpe laser</li>
+              <li class="tag tag-mono">Commande moteur</li>
+              <li class="tag tag-mono">Prototypage</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <hr class="section-divider">
+    </div>
+
+    <!-- 4. SECTION EXPLORER MES PROJETS (Passerelle vers les 2 autres pages) -->
+    <section id="projets" class="section bridge-section" aria-labelledby="bridge-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">03 &middot; Réalisations</span>
+          <h2 id="bridge-title">Explorer mes projets</h2>
+          <p>
+            Parcourez deux espaces complémentaires : mon atelier d'expérimentations menées en autonomie et mes réalisations évaluées à l'IUT de Bordeaux.
+          </p>
+        </div>
+
+        <div class="bridge-grid">
+          <!-- Carte 1 : Projets personnels (Schéma PCB / hardware orthogonal) -->
+          <a href="projets-personnels.html" class="bridge-card">
+            <div class="bridge-visual" aria-hidden="true">
+              <svg viewBox="0 0 480 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- En-tête sérigraphie PCB -->
+                <text x="24" y="26" fill="var(--text-muted)" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="0.08em">PCB &middot; PROTOTYPAGE DIY</text>
+                <text x="456" y="26" text-anchor="end" fill="var(--accent)" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="0.08em">CAO 3D &amp; CODE</text>
+                <line x1="24" y1="36" x2="456" y2="36" stroke="var(--border-subtle)" stroke-width="1"/>
+
+                <!-- Connecteur USB-C / Alimentation à gauche -->
+                <rect x="28" y="64" width="66" height="54" rx="6" fill="var(--accent-tint)" stroke="var(--accent-border)" stroke-width="1.2"/>
+                <text x="61" y="88" text-anchor="middle" fill="var(--accent-bright)" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="500">ALIM</text>
+                <text x="61" y="104" text-anchor="middle" fill="var(--text-muted)" font-family="'JetBrains Mono', monospace" font-size="9">5V / 12V</text>
+
+                <!-- Rail d'alimentation bleu (tracé PCB 45°) -->
+                <path d="M94 78H140L154 64H192" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M94 102H142L156 116H192" stroke="var(--border-strong)" stroke-width="1.2" stroke-linejoin="round"/>
+                <circle cx="140" cy="78" r="2.5" fill="var(--surface-visual)" stroke="var(--accent)" stroke-width="1.2"/>
+                <circle cx="142" cy="102" r="2.5" fill="var(--surface-visual)" stroke="var(--text-muted)" stroke-width="1.2"/>
+
+                <!-- Empreinte MCU centrale -->
+                <rect x="192" y="54" width="96" height="74" rx="6" fill="var(--surface-1)" stroke="var(--border-strong)" stroke-width="1.25"/>
+                <rect x="200" y="62" width="80" height="58" rx="4" fill="var(--surface-hover)" stroke="var(--border)" stroke-width="1"/>
+                <!-- Repère Pin 1 bleu -->
+                <circle cx="209" cy="71" r="2.6" fill="var(--accent)"/>
+                <text x="240" y="88" text-anchor="middle" fill="var(--text-strong)" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="500">C/C++ &middot; PYTHON</text>
+                <text x="240" y="105" text-anchor="middle" fill="var(--text-muted)" font-family="'JetBrains Mono', monospace" font-size="9">MCU &amp; RPi</text>
+
+                <!-- Broches supérieures & inférieures -->
+                <line x1="214" y1="45" x2="214" y2="54" stroke="var(--border-strong)" stroke-width="1.4"/>
+                <line x1="227" y1="45" x2="227" y2="54" stroke="var(--border-strong)" stroke-width="1.4"/>
+                <line x1="240" y1="45" x2="240" y2="54" stroke="var(--accent)" stroke-width="1.4"/>
+                <line x1="253" y1="45" x2="253" y2="54" stroke="var(--border-strong)" stroke-width="1.4"/>
+                <line x1="266" y1="45" x2="266" y2="54" stroke="var(--border-strong)" stroke-width="1.4"/>
+                <line x1="214" y1="128" x2="214" y2="137" stroke="var(--border-strong)" stroke-width="1.4"/>
+                <line x1="227" y1="128" x2="227" y2="137" stroke="var(--border-strong)" stroke-width="1.4"/>
+                <line x1="240" y1="128" x2="240" y2="137" stroke="var(--border-strong)" stroke-width="1.4"/>
+                <line x1="253" y1="128" x2="253" y2="137" stroke="var(--border-strong)" stroke-width="1.4"/>
+                <line x1="266" y1="128" x2="266" y2="137" stroke="var(--border-strong)" stroke-width="1.4"/>
+
+                <!-- Pistes bus vers connecteur droit -->
+                <path d="M288 76H332L346 66H380" stroke="var(--text-muted)" stroke-width="1.2" stroke-linejoin="round"/>
+                <path d="M288 91H380" stroke="var(--border-strong)" stroke-width="1.2"/>
+                <path d="M288 106H332L346 116H380" stroke="var(--border-strong)" stroke-width="1.2" stroke-linejoin="round"/>
+
+                <!-- Bloc périphériques & LED PWR à droite -->
+                <rect x="380" y="56" width="72" height="70" rx="6" fill="var(--surface-1)" stroke="var(--border)" stroke-width="1.2"/>
+                <text x="416" y="76" text-anchor="middle" fill="var(--text-strong)" font-family="'JetBrains Mono', monospace" font-size="9.5">PWM / I2C</text>
+                <line x1="392" y1="86" x2="440" y2="86" stroke="var(--surface-3)" stroke-width="1"/>
+                <circle cx="399" cy="105" r="4" fill="var(--accent)"/>
+                <text x="410" y="109" fill="var(--accent-bright)" font-family="'JetBrains Mono', monospace" font-size="9">PWR</text>
+
+                <!-- Pied technique PCB -->
+                <text x="24" y="162" fill="var(--text-muted)" font-family="'JetBrains Mono', monospace" font-size="9">PCB &middot; CAO 3D &middot; DÉVELOPPEMENT</text>
+                <text x="456" y="162" text-anchor="end" fill="var(--text-muted)" font-family="'JetBrains Mono', monospace" font-size="9">ATELIER AUTONOME</text>
+              </svg>
+            </div>
+            <div class="bridge-body">
+              <div class="bridge-meta">
+                <span class="tag tag-mono">01 &middot; Autonomie</span>
+                <span class="bridge-meta-note">Prototypes, CAO 3D &amp; outils</span>
+              </div>
+              <h3 class="bridge-card-title">Projets personnels</h3>
+              <p class="bridge-card-desc">
+                Atelier dédié à mes conceptions personnelles : développement web de ce portfolio, expérimentations électroniques, systèmes embarqués et modélisation mécanique 3D.
+              </p>
+              <div class="bridge-footer">
+                <span class="bridge-cta-text">Découvrir les projets personnels</span>
+                <span class="bridge-arrow" aria-hidden="true">
+                  <svg width="18" height="16" viewBox="0 0 18 16" fill="none">
+                    <path d="M2 8H15.5M11 3.5L15.5 8L11 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Carte 2 : Projets universitaires (Progression modulaire S1-S6 + 4 compétences) -->
+          <a href="projets-universite.html" class="bridge-card">
+            <div class="bridge-visual" aria-hidden="true">
+              <svg viewBox="0 0 480 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- En-tête cursus -->
+                <text x="24" y="26" fill="var(--text-muted)" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="0.08em">IUT DE BORDEAUX &middot; BUT GEII</text>
+                <text x="456" y="26" text-anchor="end" fill="var(--accent)" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="0.08em">6 SEMESTRES</text>
+                <line x1="24" y1="36" x2="456" y2="36" stroke="var(--border-subtle)" stroke-width="1"/>
+
+                <!-- Ligne de progression horizontale S1 -> S6 -->
+                <line x1="56" y1="68" x2="424" y2="68" stroke="var(--border)" stroke-width="1.2"/>
+                <line x1="56" y1="68" x2="156" y2="68" stroke="var(--accent)" stroke-width="1.8"/>
+
+                <!-- 6 blocs semestres (1re année S1-S2 active) -->
+                <rect x="28" y="54" width="54" height="28" rx="6" fill="var(--accent)"/>
+                <text x="55" y="72" text-anchor="middle" fill="var(--on-accent)" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600">S1</text>
+
+                <rect x="102" y="54" width="54" height="28" rx="6" fill="var(--accent-tint)" stroke="var(--accent)" stroke-width="1.2"/>
+                <text x="129" y="72" text-anchor="middle" fill="var(--accent-bright)" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="500">S2</text>
+
+                <rect x="176" y="54" width="54" height="28" rx="6" fill="var(--surface-2)" stroke="var(--border-strong)" stroke-width="1.1"/>
+                <text x="203" y="72" text-anchor="middle" fill="var(--text-strong)" font-family="'JetBrains Mono', monospace" font-size="10.5">S3</text>
+
+                <rect x="250" y="54" width="54" height="28" rx="6" fill="var(--surface-1)" stroke="var(--border)" stroke-width="1.1"/>
+                <text x="277" y="72" text-anchor="middle" fill="var(--text-muted)" font-family="'JetBrains Mono', monospace" font-size="10.5">S4</text>
+
+                <rect x="324" y="54" width="54" height="28" rx="6" fill="var(--surface-1)" stroke="var(--border)" stroke-width="1.1"/>
+                <text x="351" y="72" text-anchor="middle" fill="var(--text-muted)" font-family="'JetBrains Mono', monospace" font-size="10.5">S5</text>
+
+                <rect x="398" y="54" width="54" height="28" rx="6" fill="var(--surface-1)" stroke="var(--border)" stroke-width="1.1"/>
+                <text x="425" y="72" text-anchor="middle" fill="var(--text-muted)" font-family="'JetBrains Mono', monospace" font-size="10.5">S6</text>
+
+                <!-- 4 cellules de compétences BUT GEII -->
+                <rect x="28" y="102" width="98" height="44" rx="6" fill="var(--accent-tint)" stroke="var(--accent-border)" stroke-width="1"/>
+                <text x="38" y="121" fill="var(--accent-bright)" font-family="'JetBrains Mono', monospace" font-size="9.5">CONCEVOIR</text>
+                <rect x="38" y="131" width="76" height="3" rx="1.5" fill="var(--surface-3)"/>
+                <rect x="38" y="131" width="62" height="3" rx="1.5" fill="var(--accent)"/>
+
+                <rect x="136" y="102" width="98" height="44" rx="6" fill="var(--surface-1)" stroke="var(--border)" stroke-width="1"/>
+                <text x="146" y="121" fill="var(--text-strong)" font-family="'JetBrains Mono', monospace" font-size="9.5">VÉRIFIER</text>
+                <rect x="146" y="131" width="76" height="3" rx="1.5" fill="var(--surface-3)"/>
+                <rect x="146" y="131" width="58" height="3" rx="1.5" fill="var(--accent)"/>
+
+                <rect x="244" y="102" width="98" height="44" rx="6" fill="var(--surface-1)" stroke="var(--border)" stroke-width="1"/>
+                <text x="254" y="121" fill="var(--text-strong)" font-family="'JetBrains Mono', monospace" font-size="9.5">MAINTENIR</text>
+                <rect x="254" y="131" width="76" height="3" rx="1.5" fill="var(--surface-3)"/>
+                <rect x="254" y="131" width="46" height="3" rx="1.5" fill="var(--text-muted)"/>
+
+                <rect x="352" y="102" width="100" height="44" rx="6" fill="var(--accent-tint)" stroke="var(--accent-border)" stroke-width="1"/>
+                <text x="362" y="121" fill="var(--accent-bright)" font-family="'JetBrains Mono', monospace" font-size="9.5">INTÉGRER</text>
+                <rect x="362" y="131" width="78" height="3" rx="1.5" fill="var(--surface-3)"/>
+                <rect x="362" y="131" width="64" height="3" rx="1.5" fill="var(--accent)"/>
+
+                <!-- Pied académique -->
+                <text x="24" y="164" fill="var(--text-muted)" font-family="'JetBrains Mono', monospace" font-size="9">SAÉ &middot; DU ROBOTIQUE &middot; ÉQUIPE</text>
+                <text x="456" y="164" text-anchor="end" fill="var(--accent-bright)" font-family="'JetBrains Mono', monospace" font-size="9">4 RÉALISATIONS DOCUMENTÉES</text>
+              </svg>
+            </div>
+            <div class="bridge-body">
+              <div class="bridge-meta">
+                <span class="tag tag-mono">02 &middot; IUT de Bordeaux</span>
+                <span class="bridge-meta-note">SAÉ GEII &amp; DU Robotique</span>
+              </div>
+              <h3 class="bridge-card-title">Projets universitaires</h3>
+              <p class="bridge-card-desc">
+                Découvrez mes 4 projets réalisés à l'IUT de Bordeaux : Robot Holonome Autonome (DU Robotique), Kart à Hélice télécommandé (KAH), Thermomètre de Bain Bébé (TDB) et Système Lumineux du Rafale (SLR).
+              </p>
+              <div class="bridge-footer">
+                <span class="bridge-cta-text">Découvrir les projets universitaires</span>
+                <span class="bridge-arrow" aria-hidden="true">
+                  <svg width="18" height="16" viewBox="0 0 18 16" fill="none">
+                    <path d="M2 8H15.5M11 3.5L15.5 8L11 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <hr class="section-divider">
+    </div>
+
+    <!-- 5. SECTION CONTACT -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-banner">
+          <div class="contact-accent-bar" aria-hidden="true"></div>
+
+          <div class="contact-content">
+            <p class="eyebrow">Contact &middot; Stage, alternance &amp; projets</p>
+            <h2 id="contact-title" class="contact-title">Échangeons autour d'un stage, d'une alternance ou d'un projet technique.</h2>
+            <p class="contact-lead">
+              Étudiant en BUT GEII à l'IUT de Bordeaux, je suis ouvert aux opportunités en électronique, systèmes embarqués, automatisation industrielle et robotique. Contactez-moi directement par e-mail ou retrouvez mes travaux sur GitHub.
+            </p>
+
+            <div class="contact-actions">
+              <button type="button" class="btn btn-primary" data-copy-email="aymeric.noirot33@gmail.com">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="5.5" y="5.5" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.3"/>
+                  <path d="M10.5 5.5V4C10.5 3.17 9.83 2.5 9 2.5H4C3.17 2.5 2.5 3.17 2.5 4V9C2.5 9.83 3.17 10.5 4 10.5H5.5" stroke="currentColor" stroke-width="1.3"/>
+                </svg>
+                <span>Copier mon adresse e-mail</span>
+              </button>
+              <a href="mailto:aymeric.noirot33@gmail.com" class="btn btn-secondary">Envoyer un e-mail</a>
+            </div>
+
+            <div class="contact-meta-row">
+              <span class="contact-email-display">aymeric.noirot33@gmail.com</span>
+              <span class="contact-sep" aria-hidden="true">/</span>
+              <div class="contact-socials">
+                <a href="https://github.com/aymericnoirot33-sys" class="contact-social-link" target="_blank" rel="noopener noreferrer">
+                  <span>GitHub</span>
+                  <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M3.5 10.5L10.5 3.5M10.5 3.5H5.5M10.5 3.5V8.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="https://www.iut.u-bordeaux.fr/" class="contact-social-link" target="_blank" rel="noopener noreferrer">
+                  <span>IUT de Bordeaux</span>
+                  <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M3.5 10.5L10.5 3.5M10.5 3.5H5.5M10.5 3.5V8.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page partagé -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-mark" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="26" height="26" rx="7" stroke="var(--border-strong)" stroke-width="1.2"/>
+                <path d="M5.5 19.5C9.5 19.5 10 8.5 14 8.5C18 8.5 18.5 19.5 22.5 19.5" stroke="var(--text-strong)" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M5.5 14.5C9.2 14.5 11.2 11.5 14 11.5C16.8 11.5 18.8 14.5 22.5 14.5" stroke="var(--text-muted)" stroke-width="1" stroke-linecap="round"/>
+                <circle cx="14" cy="8.5" r="2.1" fill="var(--accent)"/>
+              </svg>
+            </span>
+            <span>Aymeric Noirot</span>
+          </a>
+          <p class="footer-desc">Portfolio d'Aymeric Noirot — BUT GEII à l'IUT de Bordeaux. Électronique, Informatique Industrielle, Automatisation &amp; Robotique.</p>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil &amp; Parcours</a></li>
+            <li><a href="projets-personnels.html">Projets personnels</a></li>
+            <li><a href="projets-universite.html">Projets universitaires</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Réseaux &amp; contact</h3>
+          <ul class="footer-links">
+            <li><a href="https://github.com/aymericnoirot33-sys" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.iut.u-bordeaux.fr/" target="_blank" rel="noopener noreferrer">IUT de Bordeaux</a></li>
+            <li>
+              <button type="button" data-copy-email="aymeric.noirot33@gmail.com">Copier : aymeric.noirot33@gmail.com</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aymeric Noirot &mdash; Portfolio BUT GEII</p>
+        <p>IUT de Bordeaux &middot; Université de Bordeaux</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

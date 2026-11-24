@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets personnels — Aymeric Noirot | Portfolio BUT GEII</title>
+  <meta name="description" content="Atelier personnel d'Aymeric Noirot, étudiant en BUT GEII à l'IUT de Bordeaux : prototypes électroniques, systèmes embarqués, robotique, modélisation 3D et outils logiciels.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='none'%3E%3Crect width='28' height='28' rx='7' fill='%23161A22'/%3E%3Crect x='1' y='1' width='26' height='26' rx='7' stroke='%23525F78' stroke-width='1.2'/%3E%3Cpath d='M5.5 19.5C9.5 19.5 10 8.5 14 8.5C18 8.5 18.5 19.5 22.5 19.5' stroke='%23F8FAFC' stroke-width='1.6' stroke-linecap='round'/%3E%3Ccircle cx='14' cy='8.5' r='2.1' fill='%2328CA67'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/personal.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/data-personal.js" defer></script>
+  <script src="js/personal.js" defer></script>
+</head>
+<body data-page="personal">
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+  <!-- En-tête partagé -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Aymeric Noirot — Retour à l'accueil">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="26" height="26" rx="7" stroke="var(--border-strong)" stroke-width="1.2"/>
+            <path d="M5.5 19.5C9.5 19.5 10 8.5 14 8.5C18 8.5 18.5 19.5 22.5 19.5" stroke="var(--text-strong)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M5.5 14.5C9.2 14.5 11.2 11.5 14 11.5C16.8 11.5 18.8 14.5 22.5 14.5" stroke="var(--text-muted)" stroke-width="1" stroke-linecap="round"/>
+            <circle cx="14" cy="8.5" r="2.1" fill="var(--accent)"/>
+          </svg>
+        </span>
+        <span>Aymeric Noirot</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="index.html" class="nav-link" data-nav="home">Accueil</a>
+        <a href="projets-personnels.html" class="nav-link is-active" data-nav="personal" aria-current="page">Projets personnels</a>
+        <a href="projets-universite.html" class="nav-link" data-nav="university">Projets universitaires</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html#contact" class="btn btn-primary btn-sm">Me contacter</a>
+        <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <path d="M2.5 5H15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M2.5 9H15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M2.5 13H15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-nav" class="mobile-nav" hidden>
+      <div class="container mobile-nav-inner">
+        <a href="index.html" class="nav-link" data-nav="home">Accueil</a>
+        <a href="projets-personnels.html" class="nav-link is-active" data-nav="personal" aria-current="page">Projets personnels</a>
+        <a href="projets-universite.html" class="nav-link" data-nav="university">Projets universitaires</a>
+        <a href="index.html#contact" class="btn btn-primary btn-sm">Me contacter</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- 1. En-tête éditorial de la page -->
+    <section class="page-hero personal-hero" aria-labelledby="personal-hero-title">
+      <div class="container">
+        <div class="personal-hero-layout">
+          <div class="personal-hero-content">
+            <p class="eyebrow">Atelier personnel &middot; Prototypage, CAO 3D &amp; autonomie</p>
+            <h1 id="personal-hero-title" class="page-hero-title">Projets personnels</h1>
+            <p class="page-hero-lead">
+              Espace dédié à mes réalisations et expérimentations menées en autonomie en électronique, systèmes embarqués, robotique, CAO 3D et outils logiciels pour prolonger par la pratique ma formation en BUT GEII à l'IUT de Bordeaux.
+            </p>
+
+            <div class="personal-hero-stats" aria-label="Repères des projets personnels">
+              <div class="personal-stat">
+                <span id="personal-total-count" class="personal-stat-value is-accent">04</span>
+                <span id="personal-total-label" class="personal-stat-label">Projets &amp; pistes</span>
+              </div>
+              <div class="personal-stat">
+                <span class="personal-stat-value">04</span>
+                <span class="personal-stat-label">Domaines techniques</span>
+              </div>
+              <div class="personal-stat">
+                <span class="personal-stat-value">PCB &rarr; Code</span>
+                <span class="personal-stat-label">De la conception au test</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="personal-bench-card" aria-label="Chaîne de prototypage de l'atelier personnel">
+            <div class="personal-bench-header">
+              <span class="personal-bench-title">Chaîne de prototypage</span>
+              <span class="personal-bench-badge">
+                <span class="personal-bench-dot" aria-hidden="true"></span>
+                Atelier GEII
+              </span>
+            </div>
+            <ol class="personal-bench-list">
+              <li class="personal-bench-row">
+                <span class="personal-bench-index">01</span>
+                <span class="personal-bench-step">Schéma &amp; PCB</span>
+                <span class="personal-bench-tools">Routage &middot; Gravure</span>
+              </li>
+              <li class="personal-bench-row">
+                <span class="personal-bench-index">02</span>
+                <span class="personal-bench-step">Code embarqué</span>
+                <span class="personal-bench-tools">C / C++ &middot; Python</span>
+              </li>
+              <li class="personal-bench-row">
+                <span class="personal-bench-index">03</span>
+                <span class="personal-bench-step">Mécanique &amp; châssis</span>
+                <span class="personal-bench-tools">OnShape &middot; CAO 3D</span>
+              </li>
+              <li class="personal-bench-row">
+                <span class="personal-bench-index">04</span>
+                <span class="personal-bench-step">Banc de validation</span>
+                <span class="personal-bench-tools">Oscilloscope &middot; Essais</span>
+              </li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <hr class="section-divider">
+    </div>
+
+    <!-- 2. Catalogue interactif des projets personnels -->
+    <section class="personal-catalog-section" aria-labelledby="personal-catalog-heading">
+      <div class="container">
+        <h2 id="personal-catalog-heading" class="sr-only">Catalogue des projets personnels</h2>
+
+        <div class="filter-bar personal-filter-bar">
+          <div id="personal-filters" class="filter-group" role="group" aria-label="Filtrer les projets personnels par catégorie">
+            <button type="button" class="filter-btn is-active" data-category="Tous" aria-pressed="true">Tous</button>
+            <button type="button" class="filter-btn" data-category="Embarqué & IoT" aria-pressed="false">Embarqué &amp; IoT</button>
+            <button type="button" class="filter-btn" data-category="Électronique & PCB" aria-pressed="false">Électronique &amp; PCB</button>
+            <button type="button" class="filter-btn" data-category="Robotique" aria-pressed="false">Robotique</button>
+            <button type="button" class="filter-btn" data-category="Logiciel & Outils" aria-pressed="false">Logiciel &amp; Outils</button>
+          </div>
+
+          <p id="personal-results-count" class="results-meta" role="status" aria-live="polite">
+            4 projets affichés
+          </p>
+        </div>
+
+        <div id="personal-projects-grid" class="projects-grid"></div>
+
+        <noscript>
+          <div class="personal-noscript">
+            <h2>Projets personnels — Aymeric Noirot</h2>
+            <p>Activez JavaScript pour filtrer par domaine et consulter les fiches détaillées de mon atelier personnel :</p>
+            <ul>
+              <li><strong>Portfolio Technique &amp; Architecture Web</strong> — Conception et développement statique (HTML, CSS, JavaScript, GitHub Pages).</li>
+              <li><strong>Électronique &amp; PCB</strong> — Montages analogiques, cartes d'alimentation et prototypage sur circuit imprimé.</li>
+              <li><strong>Embarqué &amp; IoT</strong> — Programmation C/C++ et Python pour l'acquisition de capteurs et la commande.</li>
+              <li><strong>Robotique &amp; CAO 3D</strong> — Modélisation mécanique sous OnShape et intégration mécatronique.</li>
+            </ul>
+          </div>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- 3. Bandeau passerelle vers les projets universitaires & parcours -->
+    <section class="personal-bridge-section" aria-labelledby="personal-bridge-title">
+      <div class="container">
+        <div class="cross-link-banner">
+          <div class="cross-link-content">
+            <p class="eyebrow">Suite du portfolio</p>
+            <h2 id="personal-bridge-title" class="cross-link-title">Voir aussi mes projets universitaires</h2>
+            <p class="cross-link-desc">
+              Découvrez mes 4 réalisations menées à l'IUT de Bordeaux en BUT GEII et DU Robotique (Robot Holonome Autonome, Kart à Hélice, Thermomètre de Bain Bébé et Système Lumineux du Rafale), ou revenez sur mon parcours.
+            </p>
+          </div>
+
+          <div class="cross-link-actions">
+            <a href="projets-universite.html" class="btn btn-primary">
+              <span>Voir aussi mes projets universitaires</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3.5 8H12.5M9.2 4.7L12.5 8L9.2 11.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="index.html#parcours" class="btn btn-secondary">Retourner à mon parcours</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page partagé -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-mark" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="26" height="26" rx="7" stroke="var(--border-strong)" stroke-width="1.2"/>
+                <path d="M5.5 19.5C9.5 19.5 10 8.5 14 8.5C18 8.5 18.5 19.5 22.5 19.5" stroke="var(--text-strong)" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M5.5 14.5C9.2 14.5 11.2 11.5 14 11.5C16.8 11.5 18.8 14.5 22.5 14.5" stroke="var(--text-muted)" stroke-width="1" stroke-linecap="round"/>
+                <circle cx="14" cy="8.5" r="2.1" fill="var(--accent)"/>
+              </svg>
+            </span>
+            <span>Aymeric Noirot</span>
+          </a>
+          <p class="footer-desc">Portfolio d'Aymeric Noirot — BUT GEII à l'IUT de Bordeaux. Électronique, Informatique Industrielle, Automatisation &amp; Robotique.</p>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil &amp; Parcours</a></li>
+            <li><a href="projets-personnels.html">Projets personnels</a></li>
+            <li><a href="projets-universite.html">Projets universitaires</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Réseaux &amp; contact</h3>
+          <ul class="footer-links">
+            <li><a href="https://github.com/aymericnoirot33-sys" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.iut.u-bordeaux.fr/" target="_blank" rel="noopener noreferrer">IUT de Bordeaux</a></li>
+            <li>
+              <button type="button" data-copy-email="aymeric.noirot33@gmail.com">Copier : aymeric.noirot33@gmail.com</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aymeric Noirot &mdash; Portfolio BUT GEII</p>
+        <p>IUT de Bordeaux &middot; Université de Bordeaux</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,483 @@
+/* ==========================================================================
+   Page Projets universitaires — Styles spécifiques (BUT GEII)
+   Graphite-Slate (#161A22) · Accent rouge (#F56565) · Coins modérés
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Hero éditorial & carte de progression par paliers S1–S6
+   -------------------------------------------------------------------------- */
+
+.uni-hero {
+  padding-bottom: clamp(2.5rem, 4.5vw, 3.5rem);
+}
+
+.uni-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: end;
+  gap: clamp(2rem, 4vw, 3.25rem);
+}
+
+.uni-hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.uni-hero-copy code,
+.uni-noscript code {
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-xs);
+  background-color: var(--surface-2);
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--accent-bright);
+}
+
+.uni-hero-facts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-top: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.uni-hero-fact-sep {
+  color: var(--accent-muted);
+}
+
+/* Carte de progression BUT GEII en 3 paliers plats */
+.uni-progression-card {
+  margin: 0;
+  width: 100%;
+  background-color: var(--surface-visual);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 1.25rem 1.2rem;
+}
+
+.uni-progression-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.95rem;
+  border-bottom: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.uni-progression-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--accent-bright);
+}
+
+.uni-progression-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.uni-progression-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.uni-step-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.uni-step-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.uni-step-label {
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.uni-step-sem {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  margin-right: 0.45rem;
+}
+
+.uni-step-codes {
+  font-family: var(--font-mono);
+  font-size: 0.71rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.uni-step-bar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5px;
+  width: 100%;
+}
+
+.uni-step-seg {
+  height: 6px;
+  border-radius: 3px;
+  background-color: var(--surface-3);
+}
+
+.uni-step-seg.is-filled {
+  background-color: var(--accent);
+}
+
+.uni-step-seg.is-peak {
+  background-color: var(--accent-bright);
+}
+
+/* --------------------------------------------------------------------------
+   Bandeau compact des 4 compétences BUT GEII
+   -------------------------------------------------------------------------- */
+
+.uni-pillars-section {
+  padding-top: clamp(2.5rem, 4.5vw, 3.5rem);
+  padding-bottom: clamp(2.5rem, 4.5vw, 3.5rem);
+}
+
+.uni-pillars-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.uni-pillars-hint {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.uni-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.uni-pillar-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1.1rem 1.2rem;
+  background-color: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.uni-pillar-card:hover {
+  background-color: var(--surface-hover);
+  border-color: var(--accent-muted);
+  transform: translateY(-1px);
+}
+
+.uni-pillar-card.is-active,
+.uni-pillar-card[aria-pressed='true'] {
+  background-color: var(--accent-tint);
+  border-color: var(--accent);
+}
+
+.uni-pillar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.uni-pillar-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-xs);
+  background-color: var(--surface-2);
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.uni-pillar-card:hover .uni-pillar-index {
+  background-color: var(--accent-tint);
+  border-color: var(--accent-border);
+  color: var(--accent-bright);
+}
+
+.uni-pillar-card.is-active .uni-pillar-index,
+.uni-pillar-card[aria-pressed='true'] .uni-pillar-index {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+}
+
+.uni-pillar-count {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.uni-pillar-card.is-active .uni-pillar-count,
+.uni-pillar-card[aria-pressed='true'] .uni-pillar-count {
+  color: var(--accent-bright);
+}
+
+.uni-pillar-title {
+  font-size: 0.96875rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--text-strong);
+}
+
+.uni-pillar-desc {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Section Catalogue SAÉ & Projets Tutorés
+   -------------------------------------------------------------------------- */
+
+.uni-catalog-section {
+  padding-top: 0;
+  padding-bottom: clamp(4rem, 7vw, 5.5rem);
+}
+
+.uni-results-meta {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.uni-active-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--accent-tint);
+  border: 1px solid var(--accent-border);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-bright);
+  cursor: pointer;
+  transition: border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.uni-active-chip:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+
+.uni-sae-badge {
+  background-color: var(--accent-tint);
+  border-color: var(--accent-border);
+  color: var(--accent-bright);
+}
+
+.uni-card-meta-right {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.uni-comp-tag {
+  background-color: var(--bg);
+  border-color: var(--border);
+  color: var(--text-secondary);
+}
+
+.uni-empty-state {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 3.25rem 1.5rem;
+  background-color: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.uni-empty-bar {
+  width: 36px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.uni-empty-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.uni-empty-desc {
+  max-width: 48ch;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.uni-noscript {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   Bandeau de transition vers Projets personnels & Parcours
+   -------------------------------------------------------------------------- */
+
+.uni-crosslink-section {
+  padding-top: 0;
+  padding-bottom: clamp(4.5rem, 7.5vw, 6rem);
+}
+
+.uni-crosslink-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(2rem, 4.5vw, 3rem);
+  background-color: var(--surface-1);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-lg);
+}
+
+.uni-crosslink-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  max-width: 560px;
+}
+
+.uni-crosslink-accent {
+  width: 32px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--accent);
+}
+
+.uni-crosslink-title {
+  font-size: clamp(1.375rem, 2.6vw, 1.875rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--text-strong);
+}
+
+.uni-crosslink-desc {
+  font-size: 0.96875rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.uni-crosslink-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .uni-hero-grid {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .uni-pillars-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .uni-crosslink-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .uni-crosslink-actions {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .uni-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .uni-step-top {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .uni-crosslink-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .uni-pillar-card:hover {
+    transform: none;
+  }
+}
